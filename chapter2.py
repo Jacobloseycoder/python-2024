@@ -23,3 +23,11 @@ def program11():
     first = "cat"
     last = "mario"
     print(first, last)
+    
+def program12():
+    fname = input("first name")
+    lname = input("last name")
+    print("hellow",fname,lname,)
+    
+def program13():
+    
