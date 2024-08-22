@@ -9,8 +9,17 @@ def practice2():
     #it outputs a message to the user
     print("me is king")
  
- def program2_3()
+def program2_3():
     print("dont fear")
     print ("im here")
     
-def program
+def program10():
+    dollor = .25
+    print("I have",dollor,"in my account")
+    dollor = 99.99
+    print("but now I have",dollor,"in my account")
+    
+def program11():
+    first = "cat"
+    last = "mario"
+    print(first, last)
