@@ -30,4 +30,10 @@ def program12():
     print("hellow",fname,lname,)
     
 def program13():
-    
+    name = input("what is your name")
+    age = input("what is your age")
+    income = input("what is your income")
+    print("this is your data")
+    print("name:",name)
+    print("age:",age)
+    print("income:",income)
