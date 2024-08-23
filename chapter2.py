@@ -56,3 +56,5 @@ def program16():
     av = (ft + st + tt) /3
     print("your avrige is",av)
 
+def program17():
+    
