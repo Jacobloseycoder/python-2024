@@ -37,3 +37,22 @@ def program13():
     print("name:",name)
     print("age:",age)
     print("income:",income)
+    
+def program14():
+    salory = 2500
+    bonus = 1200
+    total = salory + bonus
+    print("your income is",total,)
+    
+def program15():
+    op = input("put price")
+    dc = float(op)*.8
+    print("the total is",dc,)
+    
+def program16():
+    ft = float(input("what is your score1"))
+    st = float(input("what is your score2"))
+    tt = float(input("what is your score3"))
+    av = (ft + st + tt) /3
+    print("your avrige is",av)
+
