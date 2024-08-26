@@ -57,4 +57,16 @@ def program16():
     print("your avrige is",av)
 
 def program17():
+    tos = float(input("enter the number of seconds"))
+    hours = tos / 3600
+    minits = tos / 60
+    
+def program18():
+    fv = float (input("value you want"))
+    ar = float (input("what is the anual rate"))
+    years = float(input("how many years do you want it to take"))
+    dppy = fv / (1.0 + ar) ** years
+    print(dppy)
+    
+def program19():
     
