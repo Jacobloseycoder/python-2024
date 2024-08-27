@@ -66,7 +66,19 @@ def program18():
     ar = float (input("what is the anual rate"))
     years = float(input("how many years do you want it to take"))
     dppy = fv / (1.0 + ar) ** years
-    print(dppy)
+    print('\t$', format(dppy, ',.2f'))
     
 def program19():
+    dew = 5000.0
+    mon = 12.0
+    monpay = dew / mon
+    print("Your total deat is: \t$", format(dew, ',.2f'), sep='')
+    print("paymet per month is: \t$", format(monpay, ',.2f'), sep='')
     
+def program20():
+        1 = 127.39
+        2 = 3465.15
+        3 = 3.75
+        4 =264.82
+        5 = 88.08
+        6 = 800.00
