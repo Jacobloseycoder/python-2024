@@ -76,15 +76,56 @@ def program19():
     print("paymet per month is: \t$", format(monpay, ',.2f'), sep='')
     
 def program20():
-        1 = 127.39
-        2 = 3465.15
-        3 = 3.75
-        4 =264.82
-        5 = 88.08
-        6 = 800.00
-        print(1)
-        print(2)
-        print(3)
-        print(4)
-        print(5)
-        print(6)
+        de = 3465.15
+        be = 555.45
+        ce = 3.75
+        te = 264.82
+        re = 88.08
+        ee = 800.00
+        print(float (de))
+        print(float(be))
+        print(float(ce))
+        print(float(te))
+        print(float(re))
+        print(float(ee))
+        
+def program21():
+    import turtle as t
+    t.setup(500, 600)
+    t.penup()
+    t.hideturtle()
+    lsx = -70
+    lsy = 200
+    rsx = 80
+    rsy = 180
+    lbx = -40
+    lby = -20
+    midx = 0
+    midy = 0
+    rbx = 40
+    rby = 20
+    lkx = -90
+    lky = -180
+    rkx = 120
+    rky = -140
+    t.goto(0,0)
+    t.pendown()
+    t.dot()
+    t.goto(-40,-20)
+    t.dot()
+    t.goto(-70,200)
+    t.dot()
+    t.goto(-40,-20)
+    t.goto(-90,-180)
+    t.dot()
+    t.goto(-40,-20)
+    t.goto(0,0)
+    t.goto(40,20)
+    t.dot()
+    t.goto(80,180)
+    t.dot()
+    t.goto(40,20)
+    t.goto(120,-140)
+    t.dot()
+    
+    
