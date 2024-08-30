@@ -41,16 +41,38 @@ def task5():
     print("at",speed,"miles per hour you will travel",s15,"miles in 15 hours")
     
 def task6():
+    #takes the cost
     sale = float(input('what is the cost'))
+    #takes the cost and adds all taxs then totals it
     st = sale * .05
     ct = sale * .025
     tt = st + ct
     ts = sale + tt
+    #prints the prices and tax amounts
     print('your purchase price was:\t$',format(sale,'9,.2f'))
     print('your state tax amount is:\t$',format(st,'9,.2f'))
     print('your contry tax amount is:\t$',format(ct,'9,.2f'))
     print('your total tax is:\t\t$',format(tt,'9,.2f'))
     print('your toal is:\t\t\t$',format(ts,'9,.2f'))
     
-def task9():
+def task8():
+    asks for the total
     total = input('your total')
+    #takes the cost and adds all taxs then totals it
+    tip = total * .18
+    tax = total * .07
+    bill = total + tip + tax
+    #prints the prices,tax, and tip amounts
+    print('the sale is:\t$',format(total,'9,.2f'))
+    print('the tip is:\t$',format(tip,'9,.2f'))
+    print('the tax is:\t$',format(tax,'9,.2f'))
+    print('the total bill is:\t$',format(bill,'9,.2f'))
+
+def task9():
+    c = input('what is the temp celces')
+    f = 9 / 5 * c + 32
+    print(,c,'deggres is' ,f,'deggres in ferinhight')
+
+def task10():
+    amount = input('how many coockys do you want')
+    
