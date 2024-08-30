@@ -51,3 +51,6 @@ def task6():
     print('your contry tax amount is:\t$',format(ct,'9,.2f'))
     print('your total tax is:\t\t$',format(tt,'9,.2f'))
     print('your toal is:\t\t\t$',format(ts,'9,.2f'))
+    
+def task9():
+    total = input('your total')
