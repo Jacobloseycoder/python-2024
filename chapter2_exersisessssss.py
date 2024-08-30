@@ -74,5 +74,38 @@ def task9():
     print(,c,'deggres is' ,f,'deggres in ferinhight')
 
 def task10():
-    amount = input('how many coockys do you want')
+    # Ask the user how many cookies they want to bake
+    num_cookies = int(input("How many cookies do you want to bake? "))
+    sugar_per_cookie = 1.5 / num_cookies
+    butter_per_cookie = 1 / num_cookies
+    flour_per_cookie = 2.75 / num_cookies
+    # Calculate the required amounts of each ingredient
+    total_sugar = sugar_per_cookie * num_cookies
+    total_butter = butter_per_cookie * num_cookies
+    total_flour = flour_per_cookie * num_cookies
     
+    # Convert to cups and ounces
+    sugar_cups = int(total_sugar)
+    sugar_ounces = round((total_sugar - sugar_cups) * 8)
+    
+    butter_cups = int(total_butter)
+    butter_ounces = round((total_butter - butter_cups) * 8)
+    
+    flour_cups = int(total_flour)
+    flour_ounces = round((total_flour - flour_cups) * 8)
+    
+    # Display the results
+    print(f"For {num_cookies} cookies, you will need:")
+    print(f"{sugar_cups} cups and {sugar_ounces} ounces of sugar")
+    print(f"{butter_cups} cups and {butter_ounces} ounces of butter")
+    print(f"{flour_cups} cups and {flour_ounces} ounces of flour")
+
+def task11():
+    f = input('how many girls are there')
+    m = input('how many boys are there')
+    tot = f + m
+    fper = f / tot
+    mper = m / tot
+    fpree = fper * 100
+    mpree = mper * 100
+    print('there are a rashio of',fpree,'% girls and',mpree,'% boys in this class')
