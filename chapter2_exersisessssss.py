@@ -56,8 +56,8 @@ def task6():
     print('your toal is:\t\t\t$',format(ts,'9,.2f'))
     
 def task8():
-    asks for the total
-    total = input('your total')
+    #asks for the total
+    total = float(input('your total'))
     #takes the cost and adds all taxs then totals it
     tip = total * .18
     tax = total * .07
@@ -66,12 +66,12 @@ def task8():
     print('the sale is:\t$',format(total,'9,.2f'))
     print('the tip is:\t$',format(tip,'9,.2f'))
     print('the tax is:\t$',format(tax,'9,.2f'))
-    print('the total bill is:\t$',format(bill,'9,.2f'))
+    print('the total is:\t$',format(bill,'9,.2f'))
 
 def task9():
-    c = input('what is the temp celces')
+    c = float(input('what is the temp celces'))
     f = 9 / 5 * c + 32
-    print(,c,'deggres is' ,f,'deggres in ferinhight')
+    print(c,'deggres is' ,f,'deggres in ferinhight')
 
 def task10():
     # Ask how many cookies you want to bake
@@ -97,11 +97,35 @@ def task10():
     print(f"{flour_cups} cups and {flour_ounces} ounces of flour")
 
 def task11():
-    f = input('how many girls are there')
-    m = input('how many boys are there')
+    f = float(input('how many girls are there'))
+    m = float(input('how many boys are there'))
     tot = f + m
     fper = f / tot
     mper = m / tot
     fpree = fper * 100
     mpree = mper * 100
-    print('there are a rashio of',fpree,'% girls and',mpree,'% boys in this class')
+    print('there are a rashio of',format(fpree, ',.2f'),'% girls and',format(mpree, ',.2f'),'% boys in this class')
+
+def task15_1():
+    import turtle as t
+    t.setup(600, 600)
+    t.penup()
+    t.hideturtle()
+    t.goto(0,0)
+    t.speed(0)
+    t.pendown()
+    t.pensize(4)
+    t.goto(300,0)
+    t.goto(-300,0)
+    t.goto(0,0)
+    t.goto(0,-300)
+    t.goto(0,300)
+    t.goto(0,0)
+    t.pensize(3)
+    t.goto(-150,150)
+    t.goto(0,0)
+    t.goto(-150,-150)
+    t.goto(0,0)
+    t.goto(150,-150)
+    t.goto(0,0)
+    t.goto(150,150)
