@@ -76,9 +76,9 @@ def task9():
 def task10():
     # Ask how many cookies you want to bake
     num_cookies = int(input("How many cookies do you want to bake? "))
-    sugar_per_cookie = 1.5 / num_cookies
-    butter_per_cookie = 1 / num_cookies
-    flour_per_cookie = 2.75 / num_cookies
+    sugar_per_cookie = 1.5 / 24
+    butter_per_cookie = 1 / 24
+    flour_per_cookie = 2.75 / 24
     # Calculate the required amounts of each ingredient
     total_sugar = sugar_per_cookie * num_cookies
     total_butter = butter_per_cookie * num_cookies
@@ -133,3 +133,24 @@ def task15_1():
     t.goto(150,-150)
     t.goto(0,0)
     t.goto(150,150)
+    
+def task15_2():
+    import turtle as t
+    t.setup(600, 600)
+    t.penup()
+    t.hideturtle()
+    t.penup()
+    t.goto(-400,200)
+    t.pendown
+    t.pencolor('light blue')
+    t.circle(100)
+    t.penup()
+    t.goto(0,200)
+    t.pendown
+    t.pencolor('black')
+    t.circle(100)
+    t.penup()
+    t.goto(400,200)
+    t.pendown
+    t.pencolor('red')
+    t.circle(100)
