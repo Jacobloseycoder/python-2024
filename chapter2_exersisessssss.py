@@ -74,7 +74,7 @@ def task9():
     print(,c,'deggres is' ,f,'deggres in ferinhight')
 
 def task10():
-    # Ask the user how many cookies they want to bake
+    # Ask how many cookies you want to bake
     num_cookies = int(input("How many cookies do you want to bake? "))
     sugar_per_cookie = 1.5 / num_cookies
     butter_per_cookie = 1 / num_cookies
@@ -83,17 +83,13 @@ def task10():
     total_sugar = sugar_per_cookie * num_cookies
     total_butter = butter_per_cookie * num_cookies
     total_flour = flour_per_cookie * num_cookies
-    
     # Convert to cups and ounces
     sugar_cups = int(total_sugar)
     sugar_ounces = round((total_sugar - sugar_cups) * 8)
-    
     butter_cups = int(total_butter)
     butter_ounces = round((total_butter - butter_cups) * 8)
-    
     flour_cups = int(total_flour)
     flour_ounces = round((total_flour - flour_cups) * 8)
-    
     # Display the results
     print(f"For {num_cookies} cookies, you will need:")
     print(f"{sugar_cups} cups and {sugar_ounces} ounces of sugar")
