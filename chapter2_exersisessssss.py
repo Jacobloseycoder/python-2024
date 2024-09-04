@@ -141,16 +141,16 @@ def task15_2():
     t.hideturtle()
     t.penup()
     t.goto(-400,200)
-    t.pendown
+    t.pendown()
     t.pencolor('light blue')
     t.circle(100)
     t.penup()
     t.goto(0,200)
-    t.pendown
+    t.pendown()
     t.pencolor('black')
     t.circle(100)
     t.penup()
     t.goto(400,200)
-    t.pendown
+    t.pendown()
     t.pencolor('red')
     t.circle(100)
