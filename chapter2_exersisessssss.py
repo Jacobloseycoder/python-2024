@@ -69,7 +69,7 @@ def task8():
     print('the total is:\t$',format(bill,'9,.2f'))
 
 def task9():
-    c = float(input('what is the temp celces'))
+    c = float(input(t.goto(-300,0)'what is the temp celces'))
     f = 9 / 5 * c + 32
     print(c,'deggres is' ,f,'deggres in ferinhight')
 
@@ -97,17 +97,21 @@ def task10():
     print(f"{flour_cups} cups and {flour_ounces} ounces of flour")
 
 def task11():
+    #asks for the amount of people
     f = float(input('how many girls are there'))
     m = float(input('how many boys are there'))
+    #math
     tot = f + m
     fper = f / tot
     mper = m / tot
     fpree = fper * 100
     mpree = mper * 100
+    #prints the ratio
     print('there are a rashio of',format(fpree, ',.2f'),'% girls and',format(mpree, ',.2f'),'% boys in this class')
 
 def task15_1():
     import turtle as t
+    #turtal setup
     t.setup(600, 600)
     t.penup()
     t.hideturtle()
@@ -115,10 +119,11 @@ def task15_1():
     t.speed(0)
     t.pendown()
     t.pensize(4)
-    t.write("N")
+    #gos up down left right
     t.goto(300,0)
-    t.write('S')
+    t.write("N")
     t.goto(-300,0)
+    t.write('S')
     t.goto(0,0)
     t.goto(0,-300)
     t.write('E')
@@ -126,6 +131,7 @@ def task15_1():
     t.write('W')
     t.goto(0,0)
     t.pensize(3)
+    #gos in the cornors
     t.goto(-150,150)
     t.goto(0,0)
     t.goto(-150,-150)
@@ -136,31 +142,36 @@ def task15_1():
     
 def task15_2():
     import turtle as t
+    #sets up the turtal
     t.setup(600, 600)
     t.pensize(10)
-    t.penup()
     t.hideturtle()
     t.penup()
+    #makes the blue ring
     t.goto(-250,200)
     t.pendown()
     t.pencolor('light blue')
     t.circle(100)
     t.penup()
+    #makes the black ring
     t.goto(0,200)
     t.pendown()
     t.pencolor('black')
     t.circle(100)
     t.penup()
+    #makes the red ring
     t.goto(250,200)
     t.pendown()
     t.pencolor('red')
     t.circle(100)
     t.penup()
+    #makes the yellow ring
     t.goto(-150,100)
     t.pendown()
     t.pencolor('yellow')
     t.circle(100)
     t.penup()
+    #makes the green ring
     t.goto(150,100)
     t.pendown()
     t.pencolor('green')
