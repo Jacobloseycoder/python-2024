@@ -15,11 +15,11 @@ def task1():
    
 def task4():
     #takes the prices
-    p1 = float(input("enter the price"))
-    p2 = float(input("enter the price"))
-    p3 = float(input("enter the price"))
-    p4 = float(input("enter the price"))
-    p5 = float(input("enter the price"))
+    p1 = float(input("enter the price: "))
+    p2 = float(input("enter the price: "))
+    p3 = float(input("enter the price: "))
+    p4 = float(input("enter the price: "))
+    p5 = float(input("enter the price: "))
     #math of the code
     sub = p1+p2+p3+p4+p5
     tax = sub * .07
@@ -30,7 +30,7 @@ def task4():
     
 def task5():
     #takes speed
-    speed = int(input("what it the speed"))
+    speed = int(input("what it the speed: "))
     #multiplies the speed by the time
     s6 = speed * 6
     s10 = speed * 10
@@ -42,7 +42,7 @@ def task5():
     
 def task6():
     #takes the cost
-    sale = float(input('what is the cost'))
+    sale = float(input('what is the cost: '))
     #takes the cost and adds all taxs then totals it
     st = sale * .05
     ct = sale * .025
@@ -57,7 +57,7 @@ def task6():
     
 def task8():
     #asks for the total
-    total = float(input('your total'))
+    total = float(input('your total: '))
     #takes the cost and adds all taxs then totals it
     tip = total * .18
     tax = total * .07
@@ -69,7 +69,7 @@ def task8():
     print('the total is:\t$',format(bill,'9,.2f'))
 
 def task9():
-    c = float(input(t.goto(-300,0)'what is the temp celces'))
+    c = float(input('what is the temp celces: '))
     f = 9 / 5 * c + 32
     print(c,'deggres is' ,f,'deggres in ferinhight')
 
