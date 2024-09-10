@@ -17,4 +17,11 @@ def pro2():
         print('congrat you are samart')
 
 def pro3():
-    
+    hw = float(input('hours worked:'))
+    hp = float(input('hourly pay:'))
+    if hw > 40:
+        ot = hw * (hp * 1.5)
+        print('your overtime pay is',ot,)
+    else:
+        pay = hw * hp
+        print('your pay is',pay,)
