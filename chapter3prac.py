@@ -25,3 +25,16 @@ def pro3():
     else:
         pay = hw * hp
         print('your pay is',pay,)
+        
+def pro4():
+    pw = ('prospero')
+    ppw = input('pleas put in your password')
+    if ppw == pw:
+        print('accepted')
+    else:
+        print('not alowed acses')
+        
+def pro5():
+    fn = input('put the first name:')
+    sn = input('put the second name:')
+    print('here are the names afabeticly')
