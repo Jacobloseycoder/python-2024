@@ -35,6 +35,39 @@ def pro4():
         print('not alowed acses')
         
 def pro5():
-    fn = input('put the first name:')
-    sn = input('put the second name:')
+    fn = input('put the first name (last name first):')
+    sn = input('put the second name (last name first:')
     print('here are the names afabeticly')
+    if fn < sn:
+        print(fn)
+        print(sn)
+    else:
+        print(sn)
+        print(fn)
+
+def pro6():
+    sa = float(input('what is you salory:'))
+    if sa > 29999:
+        yr = float(input('how many years have you been on the job:'))
+        if yr > 1:
+            print('you qualified')
+        else:
+            print('you dont qualifed you need to have been at your job for atleast 2 years')
+    else:
+        print('you dont qualifed you need at least 30000$ salory')
+        
+def pro7():
+    sc = float(input('what is your score'))
+    if sc >= 90:
+        print('you got a A')
+    elif sc >= 80:
+        print('you got a B')
+    elif sc >= 70:
+        print('you got a C')
+    elif sc >= 60:
+        print('you got a D')
+    elif sc >=0:
+        print('you got a F')
+    else:
+        print('eror only stupids can get a nagitive score')
+        
