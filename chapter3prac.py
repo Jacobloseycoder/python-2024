@@ -71,3 +71,46 @@ def pro7():
     else:
         print('eror only stupids can get a nagitive score')
         
+def pro6_1():
+    sa = float(input('what is you salory:'))
+    yr = float(input('how many years have you been on the job:'))
+    if sa > 29999 and yr > 1:
+        print('you qualified')
+    else:
+        print('you dont qualifed you need at least 30000$ salory and 2 years of exsperence')
+
+def pro6_2():
+    sa = float(input('what is you salory:'))
+    yr = float(input('how many years have you been on the job:'))
+    if sa > 29999 or yr > 1:
+        print('you qualified')
+    else:
+        print('you dont qualifed you need at least 30000$ salory or 2 years of exsperence')
+
+def pro8():
+    valid = False
+    value = int(input("enter a value between 10 and 20:"))
+    if value >= 10 and value <= 20:
+        valid = True
+    if valid:
+        print('within range')
+    else:
+        print('outside of range')
+        
+def pro9():
+    import turtle as t
+    t.setup(600,600)
+    t.speed(1)
+    t.hideturtle()
+    t.penup()
+    t.goto(100,250)
+    t.pendown()
+    t.goto(125,250)
+    t.goto(125,275)
+    t.goto(100,275)
+    t.goto(100,250)
+    #
+    t.heading()
+    #
+    t.forward()
+    #make a if to cheack
