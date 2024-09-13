@@ -17,3 +17,29 @@ def pro1():
             print('domingo')
     else:
         print('I need a number between 1 and 7')
+        
+def pro2():
+    rom = int(input('give a number between 1 and 10:'))
+    if rom >= 1 and rom <= 10:
+        if rom == 1:
+            print('I ')
+        if rom == 2:
+            print('II')
+        if rom == 3:
+            print('III')
+        if rom == 4:
+            print('IV')
+        if rom == 5:
+            print('V')
+        if rom == 6:
+            print('VI')
+        if rom == 7:
+            print('VII')
+        if rom == 8:
+            print('VIII')
+        if rom == 9:
+            print('IX')
+        if rom == 10:
+            print('X')
+    else:
+        print('I need a number between 1 and 10')
