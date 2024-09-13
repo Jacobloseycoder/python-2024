@@ -100,6 +100,7 @@ def pro8():
 def pro9():
     import turtle as t
     t.setup(600,600)
+    t.clear
     t.speed(1)
     t.hideturtle()
     t.penup()
@@ -109,8 +110,19 @@ def pro9():
     t.goto(125,275)
     t.goto(100,275)
     t.goto(100,250)
-    #
-    t.heading()
-    #
-    t.forward()
-    #make a if to cheack
+    t.penup()
+    t.goto(0,0)
+    #sets up the target
+    power = int(input('select a power'))
+    dis = int(input('select a distance'))
+    power2 = power * 3
+    t.showturtle()
+    t.pendown()
+    t.setheading(power2)
+    #makes it go at a degree
+    t.forward(dis)
+    #makes a if to cheack to see if they hit it
+    if t.pos() >= (100,250) and t.pos() <= (125,275):
+        print('you did it')
+    else:
+        print('try agion')
