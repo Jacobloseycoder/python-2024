@@ -69,7 +69,7 @@ def pro4():
     bnn = nn * 8
     hnn = nn * 10
     
-    bhnn = hnn // bnn
+    bhnn = hnn / bnn
     print(bhnn)
     
     
