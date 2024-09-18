@@ -126,7 +126,22 @@ def pro7():
         print('netflix and chill')
     
 def pro8():
-    vee = input('is anyone vegan')
-    veg = input('is anyone vegataren')
-    glu = input('is anyone gluten free')
+    restaurants = {
+        "Joe’s Gourmet Burgers": {"vegetarian": False, "vegan": False, "gluten_free": False},
+        "Main Street Pizza Company": {"vegetarian": True, "vegan": False, "gluten_free": True},
+        "Corner Café": {"vegetarian": True, "vegan": True, "gluten_free": True},
+        "Mama’s Fine Italian": {"vegetarian": True, "vegan": False, "gluten_free": False},
+        "The Chef’s Kitchen": {"vegetarian": True, "vegan": True, "gluten_free": True}
+    }
+
+    vegetarian = input("Any vegetarians? (yes/no): ").lower() == 'yes'
+    vegan = input("Any vegans? (yes/no): ").lower() == 'yes'
+    gluten_free = input("Any gluten-free? (yes/no): ").lower() == 'yes'
+
+    for name, options in restaurants.items():
+        if (not vegetarian or options["vegetarian"]) and \
+           (not vegan or options["vegan"]) and \
+           (not gluten_free or options["gluten_free"]):
+            print(name)
+def pro8():
     
