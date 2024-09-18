@@ -90,7 +90,23 @@ def pro6():
 
 def pro7():
     print('reboot the computer and try to conect')
-    an = input('did this fix the problam')
+    an = input('did this fix the problam:')
     if an = no:
-        print('netflix and chill')
+        print('reboot the computer and try to conect')
+        an = input('did this fix the problam:')
+        if an = no:
+            print('verafi the cabales are furmly conected')
+            an = input('did this fix the problam:')
+            if an = no:
+                print('move the router to a better locatian')
+                an = input('did this fix the problam:')
+                if an = no:
+                    print('get a new router')
+    else:
+    print('netflix and chill')
+    
+def pro8():
+    vee = input('is anyone vegan')
+    veg = input('is anyone vegataren')
+    glu = input('is anyone gluten free')
     
