@@ -144,4 +144,60 @@ def pro8():
            (not gluten_free or options["gluten_free"]):
             print(name)
 def pro8():
-    
+    import turtle as t
+# Set up the screen
+t.setup(600, 600)
+t.speed(1)
+t.hideturtle()
+# Draw the target
+t.penup()
+t.goto(100, 250)
+t.pendown()
+t.goto(125, 250)
+t.goto(125, 275)
+t.goto(100, 275)
+t.goto(100, 250)
+t.penup()
+t.goto(0, 0)
+# Game loop
+def game():
+    while True:
+        power = int(input('Select a power (1-100): '))
+        dis = int(input('Select a distance (1-100): '))
+        power2 = power * 3
+        t.clear()
+        # Redraw the target
+        t.penup()
+        t.goto(100, 250)
+        t.pendown()
+        t.goto(125, 250)
+        t.goto(125, 275)
+        t.goto(100, 275)
+        t.goto(100, 250)
+        t.penup()
+        t.goto(0, 0)
+        # Move the turtle
+        t.showturtle()
+        t.setheading(power2)
+        t.pendown()
+        t.forward(dis)
+        # Check if the turtle hit the target
+        x, y = t.pos()
+        if 100 <= x <= 125 and 250 <= y <= 275:
+            print('You did it!')
+            break
+        else:
+            print('Try again!')
+            # Gives a hint
+            if x < 100:
+                print('Hint: Increase the power!')
+            elif x > 125:
+                print('Hint: Decrease the power!')
+            elif y < 250:
+                print('Hint: Try a longer distance!')
+            elif y > 275:
+                print('Hint: Try a shorter distance!')
+        t.penup()
+        t.goto(0, 0)
+        t.pendown()
+
