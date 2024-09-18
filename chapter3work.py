@@ -69,13 +69,28 @@ def pro4():
     bnn = nn * 8
     hnn = nn * 10
     bhnn = hnn / bnn
+    #needs to print number of paceges needed and leftover
     print('you will need',hnn,'hot dogs for the cookout')
     print('you will need',bnn,'buns for the cookout')
 
 def pro5():
-    ss = int(input('how many seconds:')
+    ss = int(input('how many seconds:'))
     print('in',ss,'seconds you have')
     days = ss / 86400
     hours = ss / 3600
     minits = ss / 60
+    #needs to print the time
+
+def pro6():
+    year = int(input('what is the year:'))
+    if year % 100 and % 4:
+        print('the year is a leap year')
+    else:
+        print('the year is not a leap year')
+
+def pro7():
+    print('reboot the computer and try to conect')
+    an = input('did this fix the problam')
+    if an = no:
+        print('netflix and chill')
     
