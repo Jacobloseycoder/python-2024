@@ -75,5 +75,7 @@ def pro4():
 def pro5():
     ss = int(input('how many seconds:')
     print('in',ss,'seconds you have')
-    
+    days = ss / 86400
+    hours = ss / 3600
+    minits = ss / 60
     
