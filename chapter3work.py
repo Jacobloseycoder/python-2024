@@ -68,10 +68,12 @@ def pro4():
     nn = pp * hd
     bnn = nn * 8
     hnn = nn * 10
-    
     bhnn = hnn / bnn
-    print(bhnn)
-    
-    
+    print('you will need',hnn,'hot dogs for the cookout')
+    print('you will need',bnn,'buns for the cookout')
+
+def pro5():
+    ss = int(input('how many seconds:')
+    print('in',ss,'seconds you have')
     
     
