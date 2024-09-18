@@ -63,47 +63,67 @@ def pro3():
         print('error')
         
 def pro4():
-    pp = int(input('how many people are atending:'))
-    hd = int(input('how many hot dogs should eveyone get:'))
-    nn = pp * hd
-    bnn = nn * 8
-    hnn = nn * 10
-    bhnn = hnn / bnn
-    #needs to print number of paceges needed and leftover
-    print('you will need',hnn,'hot dogs for the cookout')
-    print('you will need',bnn,'buns for the cookout')
-
+    nop = int(input('enter the number of people:'))
+    noh = int(input('enter the number of hot dogs per person:'))
+    nobpp = 8
+    nohpp = 10
+    tth = nop * noh
+    hpn = noh // nohpp
+    hbpn = tth // nobpp
+    hdlo = tth % nohpp
+    hdblo = tth % nobpp
+    print('The minimum number of packages of hotdogs required is',hpn,)
+    print('The minimum number of packets of hotdog buns required is',hbpn,)
+    print('The number of hotdogs left over is',hdlo,)
+    print('The number of hotdog buns leftover is',hdblo,)
+    
 def pro5():
-    ss = int(input('how many seconds:'))
-    print('in',ss,'seconds you have')
-    days = ss / 86400
-    hours = ss / 3600
-    minits = ss / 60
-    #needs to print the time
+    # Ask the user for input
+    seconds = int(input("Please enter the number of seconds: "))
+    # Initialize time components
+    days = hours = minutes = 0
+    # Convert seconds to days, hours, minutes, and seconds
+    if seconds >= 86400:  
+        days = seconds // 86400
+        seconds %= 86400
+    if seconds >= 3600:  
+        hours = seconds // 3600
+        seconds %= 3600
+    if seconds >= 60:  
+        minutes = seconds // 60
+        seconds %= 60
+    # Print the result
+    print(days, 'days,' ,hours, 'hours,' ,minutes, 'minutes,' ,seconds, 'seconds')
 
 def pro6():
     year = int(input('what is the year:'))
-    if year % 100 and % 4:
-        print('the year is a leap year')
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                print(year, "is a leap year")
+            else:
+                print(year, "is not a leap year")
+        else:
+            print(year, "is a leap year")
     else:
-        print('the year is not a leap year')
-
+        print(year, "is not a leap year")
+        
 def pro7():
     print('reboot the computer and try to conect')
     an = input('did this fix the problam:')
-    if an = no:
+    if an == 'no':
         print('reboot the computer and try to conect')
-        an = input('did this fix the problam:')
-        if an = no:
+        an == input('did this fix the problam:')
+        if an == 'no':
             print('verafi the cabales are furmly conected')
-            an = input('did this fix the problam:')
-            if an = no:
+            an == input('did this fix the problam:')
+            if an == 'no':
                 print('move the router to a better locatian')
-                an = input('did this fix the problam:')
-                if an = no:
+                an == input('did this fix the problam:')
+                if an == 'no':
                     print('get a new router')
     else:
-    print('netflix and chill')
+        print('netflix and chill')
     
 def pro8():
     vee = input('is anyone vegan')
