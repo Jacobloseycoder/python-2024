@@ -84,8 +84,8 @@ def pro4():
     # Total number of hot dogs needed
     tth = nop * noh
     # Calculate packages needed
-    hpn = (tth + nohpp - 1) // nohpp  # Hot dog packages needed (using ceiling)
-    hbpn = (tth + nobpp - 1) // nobpp  # Bun packages needed (using ceiling)
+    hpn = (tth + nohpp) // nohpp  # Hot dog packages needed (using ceiling)
+    hbpn = (tth + nobpp) // nobpp  # Bun packages needed (using ceiling)
     # Calculate leftovers
     hdlo = (hpn * nohpp) - tth  # Hot dogs left over
     hdblo = (hbpn * nobpp) - tth  # Buns left over
