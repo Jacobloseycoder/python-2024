@@ -1,6 +1,9 @@
 def pro1():
+    #asks for a number 1-7
     day = int(input('give a number between 1 and 7:'))
+    #checks if the number is between 1 and 7
     if day >= 1 and day <= 7:
+        #prints the word equal to the number
         if day == 1:
             print('lunes ')
         if day == 2:
@@ -15,12 +18,16 @@ def pro1():
             print('sábado')
         if day == 7:
             print('domingo')
+    #asks for a number 1-7 if anything else is entered
     else:
         print('I need a number between 1 and 7')
         
 def pro2():
+    #asks for a number 1-10
     rom = int(input('give a number between 1 and 10:'))
+    #checks if the number is between 1 and 10
     if rom >= 1 and rom <= 10:
+        #prints the word equal to the number
         if rom == 1:
             print('I ')
         if rom == 2:
@@ -41,24 +48,29 @@ def pro2():
             print('IX')
         if rom == 10:
             print('X')
+    #asks for a number 1-10 if anything else is entered
     else:
         print('I need a number between 1 and 10')
         
 def pro3():
+    #lets people select the color
     c1 = input('select a primary color:')
     c2 = input('select a primary color:')
+    #if they put the same code printa a error
     if c1 == 'red' and c2 == 'red':
         print('error')
     elif c1 == 'blue' and c2 == 'blue':
         print('error')
     elif c1 == 'yellow' and c2 == 'yellow':
         print('error')
+    #prints the colors blend
     elif c1 == 'red' or 'yellow' and c2 == 'red' or 'yellow':    
         print('purple')
     elif c1 == 'red' or 'blue' and c2 == 'red' or 'blue':
         print('orange')
     elif c1 == 'yellow' or 'blue' and c2 == 'yellow' or 'blue':
         print('green')
+    #if anything else is entered print error
     else:
         print('error')
         
@@ -97,9 +109,11 @@ def pro5():
 
 def pro6():
     year = int(input('what is the year:'))
+    #sets the math up
     if year % 4 == 0:
         if year % 100 == 0:
             if year % 400 == 0:
+                #prints if it is or isn't a leap year
                 print(year, "is a leap year")
             else:
                 print(year, "is not a leap year")
@@ -126,23 +140,25 @@ def pro7():
         print('netflix and chill')
     
 def pro8():
-    restaurants = {
-        "Joe’s Gourmet Burgers": {"vegetarian": False, "vegan": False, "gluten_free": False},
-        "Main Street Pizza Company": {"vegetarian": True, "vegan": False, "gluten_free": True},
-        "Corner Café": {"vegetarian": True, "vegan": True, "gluten_free": True},
-        "Mama’s Fine Italian": {"vegetarian": True, "vegan": False, "gluten_free": False},
-        "The Chef’s Kitchen": {"vegetarian": True, "vegan": True, "gluten_free": True}
-    }
-
+    restaurants = (
+        #sets the items trues and falses
+        "Joe’s Gourmet Burgers": ("vegetarian": False, "vegan": False, "gluten_free": False),
+        "Main Street Pizza Company": ("vegetarian": True, "vegan": False, "gluten_free": True),
+        "Corner Café": ("vegetarian": True, "vegan": True, "gluten_free": True),
+        "Mama’s Fine Italian": ("vegetarian": True, "vegan": False, "gluten_free": False),
+        "The Chef’s Kitchen": ("vegetarian": True, "vegan": True, "gluten_free": True)
+        )
+#asks what they are
     vegetarian = input("Any vegetarians? (yes/no): ").lower() == 'yes'
     vegan = input("Any vegans? (yes/no): ").lower() == 'yes'
     gluten_free = input("Any gluten-free? (yes/no): ").lower() == 'yes'
-
+#dessides what is alowed
     for name, options in restaurants.items():
         if (not vegetarian or options["vegetarian"]) and \
            (not vegan or options["vegan"]) and \
            (not gluten_free or options["gluten_free"]):
             print(name)
+               
 def pro8():
     import turtle as t
 # Set up the screen
