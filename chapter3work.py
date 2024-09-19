@@ -75,8 +75,10 @@ def pro3():
         print('error')
         
 def pro4():
+    #asks for the needed info
     nop = int(input('enter the number of people:'))
     noh = int(input('enter the number of hot dogs per person:'))
+    #the math
     nobpp = 8
     nohpp = 10
     tth = nop * noh
@@ -84,6 +86,7 @@ def pro4():
     hbpn = tth // nobpp
     hdlo = tth % nohpp
     hdblo = tth % nobpp
+    #prints the minimums and the left over
     print('The minimum number of packages of hotdogs required is',hpn,)
     print('The minimum number of packets of hotdog buns required is',hbpn,)
     print('The number of hotdogs left over is',hdlo,)
@@ -123,6 +126,7 @@ def pro6():
         print(year, "is not a leap year")
         
 def pro7():
+    #trys to fix the problem then ask if it worked
     print('reboot the computer and try to conect')
     an = input('did this fix the problam:')
     if an == 'no':
@@ -136,6 +140,7 @@ def pro7():
                 an == input('did this fix the problam:')
                 if an == 'no':
                     print('get a new router')
+    #tells them to relax if the problem is solved.
     else:
         print('netflix and chill')
     
