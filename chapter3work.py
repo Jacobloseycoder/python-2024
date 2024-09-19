@@ -75,22 +75,26 @@ def pro3():
         print('error')
         
 def pro4():
-    #asks for the needed info
-    nop = int(input('enter the number of people:'))
-    noh = int(input('enter the number of hot dogs per person:'))
-    #the math
-    nobpp = 8
-    nohpp = 10
+    # Asks for the needed info
+    nop = int(input('Enter the number of people: '))
+    noh = int(input('Enter the number of hot dogs per person: '))
+    # The math
+    nobpp = 8  # number of hot dogs in a package
+    nohpp = 10  # number of buns in a package
+    # Total number of hot dogs needed
     tth = nop * noh
-    hpn = noh // nohpp
-    hbpn = tth // nobpp
-    hdlo = tth % nohpp
-    hdblo = tth % nobpp
-    #prints the minimums and the left over
-    print('The minimum number of packages of hotdogs required is',hpn,)
-    print('The minimum number of packets of hotdog buns required is',hbpn,)
-    print('The number of hotdogs left over is',hdlo,)
-    print('The number of hotdog buns leftover is',hdblo,)
+    # Calculate packages needed
+    hpn = (tth + nohpp - 1) // nohpp  # Hot dog packages needed (using ceiling)
+    hbpn = (tth + nobpp - 1) // nobpp  # Bun packages needed (using ceiling)
+    # Calculate leftovers
+    hdlo = (hpn * nohpp) - tth  # Hot dogs left over
+    hdblo = (hbpn * nobpp) - tth  # Buns left over
+    # Prints the minimums and the left over
+    print('The minimum number of packages of hot dogs required is', hpn)
+    print('The minimum number of packages of hot dog buns required is', hbpn)
+    print('The number of hot dogs left over is', hdlo)
+    print('The number of hot dog buns left over is', hdblo)
+
     
 def pro5():
     # Ask the user for input
@@ -145,14 +149,14 @@ def pro7():
         print('netflix and chill')
     
 def pro8():
-    restaurants = (
-        #sets the items trues and falses
-        "Joe’s Gourmet Burgers": ("vegetarian": False, "vegan": False, "gluten_free": False),
-        "Main Street Pizza Company": ("vegetarian": True, "vegan": False, "gluten_free": True),
-        "Corner Café": ("vegetarian": True, "vegan": True, "gluten_free": True),
-        "Mama’s Fine Italian": ("vegetarian": True, "vegan": False, "gluten_free": False),
-        "The Chef’s Kitchen": ("vegetarian": True, "vegan": True, "gluten_free": True)
-        )
+    restaurants = {
+    # Sets the items true and false
+    "Joe’s Gourmet Burgers": {"vegetarian": False, "vegan": False, "gluten_free": False},
+    "Main Street Pizza Company": {"vegetarian": True, "vegan": False, "gluten_free": True},
+    "Corner Café": {"vegetarian": True, "vegan": True, "gluten_free": True},
+    "Mama’s Fine Italian": {"vegetarian": True, "vegan": False, "gluten_free": False},
+    "The Chef’s Kitchen": {"vegetarian": True, "vegan": True, "gluten_free": True}
+    }
 #asks what they are
     vegetarian = input("Any vegetarians? (yes/no): ").lower() == 'yes'
     vegan = input("Any vegans? (yes/no): ").lower() == 'yes'
@@ -163,62 +167,49 @@ def pro8():
            (not vegan or options["vegan"]) and \
            (not gluten_free or options["gluten_free"]):
             print(name)
-               
-def pro8():
-    import turtle as t
-# Set up the screen
-t.setup(600, 600)
-t.speed(1)
-t.hideturtle()
-# Draw the target
-t.penup()
-t.goto(100, 250)
-t.pendown()
-t.goto(125, 250)
-t.goto(125, 275)
-t.goto(100, 275)
-t.goto(100, 250)
-t.penup()
-t.goto(0, 0)
-# Game loop
-def game():
-    while True:
-        power = int(input('Select a power (1-100): '))
-        dis = int(input('Select a distance (1-100): '))
-        power2 = power * 3
-        t.clear()
-        # Redraw the target
-        t.penup()
-        t.goto(100, 250)
-        t.pendown()
-        t.goto(125, 250)
-        t.goto(125, 275)
-        t.goto(100, 275)
-        t.goto(100, 250)
-        t.penup()
-        t.goto(0, 0)
-        # Move the turtle
-        t.showturtle()
-        t.setheading(power2)
-        t.pendown()
-        t.forward(dis)
-        # Check if the turtle hit the target
-        x, y = t.pos()
-        if 100 <= x <= 125 and 250 <= y <= 275:
-            print('You did it!')
-            break
-        else:
-            print('Try again!')
-            # Gives a hint
-            if x < 100:
-                print('Hint: Increase the power!')
-            elif x > 125:
-                print('Hint: Decrease the power!')
-            elif y < 250:
-                print('Hint: Try a longer distance!')
-            elif y > 275:
-                print('Hint: Try a shorter distance!')
-        t.penup()
-        t.goto(0, 0)
-        t.pendown()
 
+def pro9():
+    #sets it up
+    import turtle as t
+    t.setup(600, 600)
+    t.speed(1)
+    t.hideturtle()
+    #desides the power and distance
+    power = int(input('Select a power (1-100): '))
+    dis = int(input('Select a distance (1-100): '))
+    power2 = power * 3
+    t.clear()
+    # Redraw the target
+    t.penup()
+    t.goto(100, 250)
+    t.pendown()
+    t.goto(125, 250)
+    t.goto(125, 275)
+    t.goto(100, 275)
+    t.goto(100, 250)
+    t.penup()
+    t.goto(0, 0)
+    # Move the turtle
+    t.showturtle()
+    t.setheading(power2)
+    t.pendown()
+    t.forward(dis)
+    # Check if the turtle hit the target
+    x, y = t.pos()
+    if 100 <= x <= 125 and 250 <= y <= 275:
+        print('You did it!')
+    else:
+        print('Try again!')
+        # Gives a hint
+        if x < 100:
+            print('Hint: Increase the power!')
+        elif x > 125:
+            print('Hint: Decrease the power!')
+        elif y < 250:
+            print('Hint: Try a longer distance!')
+        elif y > 275:
+            print('Hint: Try a shorter distance!')
+        (pro9())
+    t.penup()
+    t.goto(0, 0)
+    t.pendown()
