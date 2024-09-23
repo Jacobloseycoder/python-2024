@@ -174,12 +174,9 @@ def pro9():
     t.setup(600, 600)
     t.speed(1)
     t.hideturtle()
-    #desides the power and distance
-    power = int(input('Select a power (1-100): '))
-    dis = int(input('Select a distance (1-100): '))
-    power2 = power * 3
+     #seting up
     t.clear()
-    # Redraw the target
+    # makes the target
     t.penup()
     t.goto(100, 250)
     t.pendown()
@@ -189,6 +186,10 @@ def pro9():
     t.goto(100, 250)
     t.penup()
     t.goto(0, 0)
+    #desides the power and distance
+    power = int(input('Select a power (1-100): '))
+    dis = int(input('Select a distance (1-600): '))
+    power2 = power * 3
     # Move the turtle
     t.showturtle()
     t.setheading(power2)
