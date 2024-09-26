@@ -210,7 +210,7 @@ def pro9():
             print('Hint: Try a longer distance!')
         elif y > 275:
             print('Hint: Try a shorter distance!')
-        (pro9())
+       # (pro9())
     t.penup()
-    t.goto(0, 0)
+    #t.goto(0, 0)
     t.pendown()
