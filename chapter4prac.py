@@ -44,3 +44,52 @@ def p3():
             print('turn the thermostat down and wait 5 min')
         else:
             print('u good')
+
+def p4():
+    count = 1
+    MAX_COUNT = 11
+    while count < MAX_COUNT:
+        #this block of code is in the loop
+        print(f"Counting iteration #{count}")
+    #this block of code is out of the loop
+    print(f"Your loop ran for {count - 1} iterations.")
+    print("Goodbye")
+
+def p5():
+    print('I will display the numbers 1-5')
+    for num in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]:
+        print(num)
+        
+def p6():
+    print('I will display the odd numbers 1-9')
+    for num in [1,3,5,7,9]:
+        print(num)
+        
+def p7 ():
+    print('mcu #1s')
+    for num in ['steve', 'tony', 'thor', 'wanda']:
+        print(num)
+        
+def p8():
+    for num in range(10):
+        print(num)
+        
+def p8_2():
+    for num in range(1,11):
+        print(num)
+
+def p9():
+    for count in range(5):
+        print('hello world')
+        
+def p10():
+    for number in range(1,10 + 1):
+        square = number ** 2
+        print(number, '\t', square)
+        
+def p10_2():
+    for word in range(1):
+        print('KPH','     MPH')
+    for KPH in range(60,140,10):
+        MPH = KPH * .6214
+        print(KPH, '\t', MPH)
