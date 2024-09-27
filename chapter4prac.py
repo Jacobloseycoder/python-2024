@@ -93,3 +93,16 @@ def p10_2():
     for KPH in range(60,140,10):
         MPH = KPH * .6214
         print(KPH, '\t', MPH)
+
+def p11():
+    end = int(input('how many times do you want it to go for:'))
+    for number in range(1,end + 1):
+        square = number ** 2
+        print(number, '\t', square)
+
+def p11_2(): 
+    start = int(input('what do you want the start number:'))
+    end = int(input('what do you want the end number:'))
+    for number in range(start,end + 1):
+        square = number ** 2
+        print(number, '\t', square)
