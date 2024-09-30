@@ -92,7 +92,7 @@ def p10_2():
         print('KPH','     MPH')
     for KPH in range(60,140,10):
         MPH = KPH * .6214
-        print(KPH, '\t', MPH)
+        print(KPH, '\t', format(MPH, '.1f'))
 
 def p11():
     end = int(input('how many times do you want it to go for:'))
