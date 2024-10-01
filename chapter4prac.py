@@ -106,3 +106,74 @@ def p11_2():
     for number in range(start,end + 1):
         square = number ** 2
         print(number, '\t', square)
+
+def p12():
+    max = 5
+    total = 0.0
+    print('this program calculates the sum of')
+    print(max,'numbers you will enter')
+    for counters in range(max):
+        number = int(input('please enter a number:'))
+        total = total + number
+    print(' the total of your', max, 'numbers is:',total)
+
+def p13():
+    PROP TAX = .0865 
+    lot = int(input("Please enter a lot number (enter to end): "))
+    while lot != 0:
+        value = float(input("Please enter the property value: "))
+        total = value * PROP TAX #Calculate property tax
+        print("Property tax: $", format (total,.2f'), sep= '')
+        lot = int(input("Please enter a lot number (enter e to end): "))
+    print("\nThank you for using the Cyberdyne Systems property tax calculator, all your rights reserved.")
+
+def p14():
+    hours = int(input("Enter the number of hours worked for 1 week: ")) #Get hours worked
+    pay_rate = int(input("Enter the hourly rate: ")) #Get pay rate
+    gross pay hours pay_rate
+    #Output gross pay
+    print('Gross pay: $', format (gross pay,,.2f'), sep='')
+
+def p15():
+    MARK_UP = 1.25
+    another = 'y'
+    while another == 'y' or another == "y":
+        wholesale = float(input("Enter the wholesale cost: "))
+        retail = wholesale * MARK_UP
+        print('Retail price: $', format (retail, ',.2f'), sep='')
+        another = input('Do you want to enter another item?' +
+                        '(Enter y for yes): ')
+
+def p16():
+    students = int(input("How many students? "))
+    tests = int(input("How many tests per student? "))
+    for student in range(1, students + 1):
+        total = 0.0
+        print("Student number", student)
+        print("--
+        for test in range(1, tests + 1):
+            print("Test number", test, end='')
+            score = float(input(":"))
+            total score
+        avg_tests total / tests
+        print("The average for student number", student, "is: ", format (avg_tests, .2f')) 
+        print()
+
+def p17():
+    rows = int(input("Enter the number of rows to print: "))
+    columns= int(input("Enter the number of columns to print: "))
+    print()
+    for row in range(rows):
+        for col in range(columns):
+            print("*", end='')
+        print()
+
+def p18():
+    base_size = int(input("Enter the base size of the triangle: "))
+    for row in range(1, base_size + 1):
+    for column in range(row):
+        print("", end='')
+    print()
+
+def p19():
+    
