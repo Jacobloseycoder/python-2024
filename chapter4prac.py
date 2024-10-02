@@ -65,7 +65,7 @@ def p6():
     for num in [1,3,5,7,9]:
         print(num)
         
-def p7 ():
+def p7():
     print('mcu #1s')
     for num in ['steve', 'tony', 'thor', 'wanda']:
         print(num)
@@ -177,6 +177,60 @@ def p18():
     base_size = int(input("Enter the base size of the triangle: "))
     for row in range(1, base_size + 1):
         for column in range(row):
-            print("", end='')
-        print()
+            print("*", end='')
+        print('')
     
+def p19():
+    num = int(input('enter the number of staiers:'))
+    print()
+    for stairs in range(num):
+        for step in range(stairs):
+            print("@", end='')
+        print("@")
+        
+def p20():
+    import turtle
+    num = int(input('enter the number of circles:'))
+    strad = 20
+    offset = 10
+    speeed = 0
+    turtle.speed(speeed)
+    turtle.hideturtle()
+    rad = strad
+    for circle in range(num):
+        turtle.circle(radius)
+        xc = turtle.xcor()
+        yc = turtle.xcor() - offset
+        rad = rad + offset
+        turtle.penup()
+        turtle.goto(xc, yc)
+        turtle.pendown()
+        
+def p21():
+    import turtle
+    num = 36
+    rad = 100
+    angle = 10
+    speeed = 0
+    turtle.speed(speeed)
+    for iteration in range(num):
+        turtle.circle(rad)
+        turtle.left(angle)
+        
+def p22():
+    import turtle
+    sx = -200
+    sy = 0
+    lines = 36
+    length = 400
+    ang = 170
+    speeed = 0
+    turtle.hideturtle()
+    turtle.penup()
+    turtle.goto(sx, sy)
+    turtle.pendown()
+    turtle.speed(speeed)
+    for iteration in range(lines):
+        turtle.forward(length)
+        turtle.left(angle)
+        
