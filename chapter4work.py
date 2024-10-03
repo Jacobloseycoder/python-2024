@@ -1,4 +1,4 @@
-def w1():
+def w():
     d1 = int(input('how many bugs did you collect on day 1? :'))
     d2 = int(input('how many bugs did you collect on day 2? :'))
     d3 = int(input('how many bugs did you collect on day 3? :'))
@@ -14,5 +14,24 @@ def w1():
     else:
         print('negitives are not exsepted')
         
+def w1():
+     #f string lets you use inputs easy
+    day = 'day'
+    daynum = 1
+    value = int(input("enter a number of bugs cought:"))
+    # to change the number on the day
+    daynum = daynum + 1
+    #if statement to see if the number inputed is correct
+    if value >= 0:
+        print(f"on {day}{daynum} you sold {value} items. ")
+    else:
+        print(f"{value} is an invalid value. ")
+        #makes a loop that stops after 5 prints
+    count = 0
+    while count < 5:
+        count += 1
+
 def w2():
+    mph = int(input('enter the number of mph your going:'))
+    ho = int(input('enter the number of hours your going'))
     
