@@ -198,7 +198,7 @@ def p20():
     turtle.hideturtle()
     rad = strad
     for circle in range(num):
-        turtle.circle(radius)
+        turtle.circle(rad)
         xc = turtle.xcor()
         yc = turtle.xcor() - offset
         rad = rad + offset
@@ -211,8 +211,8 @@ def p21():
     num = 36
     rad = 100
     angle = 10
-    speeed = 0
-    turtle.speed(speeed)
+    sp = 0
+    turtle.speed(sp)
     for iteration in range(num):
         turtle.circle(rad)
         turtle.left(angle)
@@ -224,13 +224,13 @@ def p22():
     lines = 36
     length = 400
     ang = 170
-    speeed = 0
+    sp = 0
     turtle.hideturtle()
     turtle.penup()
     turtle.goto(sx, sy)
     turtle.pendown()
-    turtle.speed(speeed)
+    turtle.speed(sp)
     for iteration in range(lines):
         turtle.forward(length)
-        turtle.left(angle)
+        turtle.left(ang)
         
