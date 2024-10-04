@@ -40,4 +40,7 @@ def w2():
         print('error incorect speed or time.')
         
 def w3():
-    
+    sp = int(input('enter the starting population:'))
+    pdg = int(input('enter the percent of daily growth:'))
+    days = int(input('enter the number of days to simulate:'))
+    #add format and math
