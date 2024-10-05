@@ -43,8 +43,17 @@ def w3():
     sp = int(input('enter the starting population:'))
     pdg = int(input('enter the percent of daily growth:'))
     days = int(input('enter the number of days to simulate:'))
+    tt = 1
+    ttm = sp
     #add format and math
     pdg = pdg / 100
+    print("day" '\t', format("projected population" '.1f'))
+    print('__________________________________')
+    while tt < days + 1:
+        print(tt, '\t', format(ttm, '.1f'))
+        tt = tt + 1
+        math = ttm * pdg
+        ttm = math + ttm
 
 def w4():
     base = int(input('what do you want the base to be:'))
@@ -54,8 +63,11 @@ def w4():
 
 def w5():
     stares = int(input('how many stares do you want'))
-    for i in range(stares):
-        print(' ' * i + 'e ' * (stares - i))
+    if stares >= 0:
+        for i in range(stares):
+            print(' ' * i + 'e ' * (stares - i))
+    else:
+        print('error')
 
 def w6():
     
