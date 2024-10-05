@@ -47,10 +47,15 @@ def w3():
     pdg = pdg / 100
 
 def w4():
-    base = int(input('what do you want the base to be:')
+    base = int(input('what do you want the base to be:'))
     while base > 0:
         print(base)
         base = base - 1
 
 def w5():
     stares = int(input('how many stares do you want'))
+    for i in range(stares):
+        print(' ' * i + 'e ' * (stares - i))
+
+def w6():
+    
