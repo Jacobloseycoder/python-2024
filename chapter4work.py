@@ -44,3 +44,13 @@ def w3():
     pdg = int(input('enter the percent of daily growth:'))
     days = int(input('enter the number of days to simulate:'))
     #add format and math
+    pdg = pdg / 100
+
+def w4():
+    base = int(input('what do you want the base to be:')
+    while base > 0:
+        print(base)
+        base = base - 1
+
+def w5():
+    stares = int(input('how many stares do you want'))
