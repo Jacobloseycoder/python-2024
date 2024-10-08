@@ -107,6 +107,9 @@ def w6():
     turtle.goto(200,-200)
     x = 5
     y = random.randint(0,255)
+    z = random.randint(0,255)
+    z2 = random.randint(0,255)
+    return y, z, z2
     turtle.pendown()
     times = int(input('how many times do you want it to go'))
     while times > 0:
