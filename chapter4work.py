@@ -104,7 +104,7 @@ def w6():
     turtle.setup(400,400)
     turtle.speed(0)
     turtle.penup()
-    turtle.goto(550,-370)
+    turtle.goto(755,-385)
     x = 5
     y = random.randint(1,3)
     turtle.pendown()
@@ -126,5 +126,5 @@ def w6():
         turtle.forward(x)
         turtle.setheading(0)
         turtle.forward(x)
-        x = x * 2
+        x = x * 1.1
         times = times - 1
