@@ -100,23 +100,23 @@ def w5():
 def w6():
     import turtle
     import random
+    colormode(255)
     turtle.hideturtle()
     turtle.setup(400,400)
     turtle.speed(0)
     turtle.penup()
     turtle.goto(755,-385)
     x = 5
-    y = random.randint(1,3)
+    r = random.randint(0,255)
+    y = random.randint(0,255)
+    b = random.randint(0,255)
     turtle.pendown()
     times = int(input('how many times do you want it to go'))
     while times > 0:
-        y = random.randint(1,3)
-        if y == 1:
-            pc = ('red')
-        elif y == 2:
-            pc = ('blue')
-        elif y == 3:
-            pc = ('yellow')
+        r = random.randint(0,255)
+        y = random.randint(0,255)
+        b = random.randint(0,255)
+        pc = r, y, b
         turtle.pencolor(pc)
         turtle.setheading(90)
         turtle.forward(x)
@@ -128,3 +128,31 @@ def w6():
         turtle.forward(x)
         x = x * 1.1
         times = times - 1
+
+def w7():
+    import turtle
+    import random
+    colormode(255)
+    turtle.hideturtle()
+    turtle.setup(400,400)
+    turtle.speed(0)
+    turtle.penup()
+    turtle.goto(0,0)
+    pp = 90
+    x = 5
+    r = random.randint(0,255)
+    y = random.randint(0,255)
+    b = random.randint(0,255)
+    turtle.pendown()
+    times = int(input('how many times do you want it to go'))
+    while times > 0:
+        r = random.randint(0,255)
+        y = random.randint(0,255)
+        b = random.randint(0,255)
+        pc = r, y, b
+        turtle.pencolor(pc)
+        turtle.setheading(pp)
+        turtle.forward(x)
+        x = x * 1.1
+        times = times - 1
+        pp = pp + 90
