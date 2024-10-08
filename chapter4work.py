@@ -101,10 +101,10 @@ def w6():
     import turtle
     import random
     turtle.hideturtle()
-    turtle.setup(200,200)
+    turtle.setup(400,400)
     turtle.speed(0)
     turtle.penup()
-    turtle.goto(400,-400)
+    turtle.goto(500,-350)
     x = 5
     y = random.randint(1,3)
     turtle.pendown()
