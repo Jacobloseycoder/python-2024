@@ -97,3 +97,27 @@ def w5():
     else:
         print('error')
 
+def w6():
+    import turtle
+    import random
+    turtle.hideturtle()
+    turtle.setup(200,200)
+    turtle.speed(0)
+    turtle.penup()
+    turtle.goto(200,-200)
+    x = 5
+    y = random.randint(0,255)
+    turtle.pendown()
+    times = int(input('how many times do you want it to go'))
+    while times > 0:
+        turtle.pencolor(y)
+        turtle.setheading(90)
+        turtle.forward(x)
+        turtle.setheading(180)
+        turtle.forward(x)
+        turtle.setheading(270)
+        turtle.forward(x)
+        turtle.setheading(0)
+        turtle.forward(x)
+        x = x * 2
+        times = times - 1
