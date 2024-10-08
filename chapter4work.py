@@ -91,9 +91,13 @@ def w4():
         base = base - 1
 
 def w5():
-    stares = int(input('how many stares do you want'))
-    if stares >= 0:
-        
+    i = int(input('how many stares do you want'))
+    if i >= 0:
+            for i in range(10):  # Number of rows
+        if i <= 5:
+            print("e " * i)  # For the first half of the pattern (growing part)
+        else:
+            print("e " * (10 - i))  # For the second half of the pattern (shrinking part)
     else:
         print('error')
 
