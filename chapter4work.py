@@ -106,14 +106,18 @@ def w6():
     turtle.penup()
     turtle.goto(200,-200)
     x = 5
-    y = random.randint(0,255)
-    z = random.randint(0,255)
-    z2 = random.randint(0,255)
-    return y, z, z2
+    y = random.randint(1,3)
     turtle.pendown()
     times = int(input('how many times do you want it to go'))
     while times > 0:
-        turtle.pencolor(y)
+        y = random.randint(1,3)
+        if y == 1:
+            pc = ('red')
+        elif y == 2:
+            pc = ('blue')
+        elif y == 3:
+            pc = ('yellow')
+        turtle.pencolor(pc)
         turtle.setheading(90)
         turtle.forward(x)
         turtle.setheading(180)
