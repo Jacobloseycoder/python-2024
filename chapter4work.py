@@ -1,3 +1,30 @@
+def start():
+    print('1 : Bug Collector')
+    print('2 : Distance Traveled')
+    print('3 : Population Simulator')
+    print('4 : Reverse Triangle')
+    print('5 : Stair Pattern')
+    print('6 : Repeating Squares')
+    print('7 : Hypnotize')
+    task = int(input('what task do you want'))
+    if task > 0 and task < 8:
+        if task == 1:
+            w1()
+        elif task == 2:
+            w2()
+        elif task == 3:
+            w3()
+        elif task == 4:
+            w4()
+        elif task == 5:
+            w5()
+        elif task == 6:
+            w6()
+        elif task == 7:
+            w7()
+    else:
+        print('error')
+
 def w1():
     #sets up the tasks
     day = 'day'
@@ -144,29 +171,41 @@ def w6():
         times = times - 1
 
 def w7():
+    #importing
     import turtle
     import random
+    #setup
     turtle.colormode(255)
     turtle.hideturtle()
     turtle.setup(400,400)
     turtle.speed(0)
     turtle.penup()
     turtle.goto(0,0)
+    #needed numbers
     pp = 90
     x = 5
+    #random colors
     r = random.randint(0,255)
     y = random.randint(0,255)
     b = random.randint(0,255)
     turtle.pendown()
+    #asks for imput
     times = int(input('how many times do you want it to go'))
+    #starts loop
     while times > 0:
+        #selects random color
         r = random.randint(0,255)
         y = random.randint(0,255)
         b = random.randint(0,255)
         pc = r, y, b
         turtle.pencolor(pc)
+        #sets derection
         turtle.setheading(pp)
+        #moves
         turtle.forward(x)
-        x = x * 1.1
+        #increses the momvent distance
+        x = x * 1.05
+        #stops loop
         times = times - 1
+        #changes the way it faces
         pp = pp + 90
