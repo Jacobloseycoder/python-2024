@@ -94,13 +94,22 @@ def w5():
     st = int(input('how many stares do you want'))
     if st >= 0:
         print()
+for i in range(1, rows + 1):
+    print('@', end=' ')
+    if i > 1:
+        for j in range(1, i):
+            print('  ', end=' ')
+        print('@', end=' ')
+    print()
     else:
         print('error')
 
 def w6():
+    #imports
     import turtle
     import random
     colormode(255)
+    #sets up for the task
     turtle.hideturtle()
     turtle.setup(400,400)
     turtle.speed(0)
@@ -111,13 +120,17 @@ def w6():
     y = random.randint(0,255)
     b = random.randint(0,255)
     turtle.pendown()
+    #asks for the imput
     times = int(input('how many times do you want it to go'))
+    #makes it a loop
     while times > 0:
+        #random color
         r = random.randint(0,255)
         y = random.randint(0,255)
         b = random.randint(0,255)
         pc = r, y, b
         turtle.pencolor(pc)
+        #makes the cube
         turtle.setheading(90)
         turtle.forward(x)
         turtle.setheading(180)
@@ -126,7 +139,9 @@ def w6():
         turtle.forward(x)
         turtle.setheading(0)
         turtle.forward(x)
+        #increses the cubes size
         x = x * 1.1
+        #slowly ends the loop
         times = times - 1
 
 def w7():
