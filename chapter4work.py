@@ -91,16 +91,15 @@ def w4():
         base = base - 1
 
 def w5():
-    st = int(input('how many stares do you want'))
-    if st >= 0:
-        print()
-for i in range(1, rows + 1):
-    print('@', end=' ')
-    if i > 1:
-        for j in range(1, i):
-            print('  ', end=' ')
-        print('@', end=' ')
-    print()
+    rows = int(input('how many stares do you want'))
+    if rows >= 0:
+        for i in range(1, rows + 1):
+            print('@', end='')
+            if i > 0:
+                for j in range(1, i):
+                    print(' ', end='')
+                print('@', end='')
+            print()
     else:
         print('error')
 
@@ -147,7 +146,7 @@ def w6():
 def w7():
     import turtle
     import random
-    colormode(255)
+    turtle.colormode(255)
     turtle.hideturtle()
     turtle.setup(400,400)
     turtle.speed(0)
