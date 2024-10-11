@@ -134,7 +134,7 @@ def w6():
     #imports
     import turtle
     import random
-    colormode(255)
+    turtle.colormode(255)
     #sets up for the task
     turtle.hideturtle()
     turtle.setup(400,400)
