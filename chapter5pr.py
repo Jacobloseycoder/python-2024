@@ -44,3 +44,13 @@ def p4():
     print('hellow',name)
 def getname():
     name = input('what is your name')
+    
+def p5():
+    tex()
+    kan()
+def tex():
+    birds = 5000
+    print('texas has',birds,'birds')
+def kan():
+    birds = 8000
+    print('kansas has',birds,'birds')
