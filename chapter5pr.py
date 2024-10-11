@@ -19,7 +19,7 @@ def p3():
         print('pull the frunt off')
     go = int(input('what step are you on 0 to leave'))
     while go < 6:
-        if go < 1:
+        if go == 0:
             print('ending...')
         elif go == 1:
             step1()
@@ -36,3 +36,7 @@ def p3():
         elif go == 5:
             step5()
             go = go + 1
+        else:
+            print('try agion')
+
+def p4():
