@@ -1,4 +1,5 @@
 def start():
+    go = 1
     print('1 : Bug Collector')
     print('2 : Distance Traveled')
     print('3 : Population Simulator')
@@ -6,24 +7,25 @@ def start():
     print('5 : Stair Pattern')
     print('6 : Repeating Squares')
     print('7 : Hypnotize')
-    task = int(input('what task do you want'))
-    if task > 0 and task < 8:
-        if task == 1:
-            w1()
-        elif task == 2:
-            w2()
-        elif task == 3:
-            w3()
-        elif task == 4:
-            w4()
-        elif task == 5:
-            w5()
-        elif task == 6:
-            w6()
-        elif task == 7:
-            w7()
-    else:
-        print('error')
+    while go > 0 and go < 8:
+        task = int(input('what task do you want'))
+        if task > 0 and task < 8:
+            if task == 1:
+                w1()
+            elif task == 2:
+                w2()
+            elif task == 3:
+                w3()
+            elif task == 4:
+                w4()
+            elif task == 5:
+                w5()
+            elif task == 6:
+                w6()
+            elif task == 7:
+                w7()
+        else:
+            print('error')
 
 def w1():
     #sets up the tasks
