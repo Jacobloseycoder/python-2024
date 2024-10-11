@@ -40,3 +40,7 @@ def p3():
             print('try agion')
 
 def p4():
+    getname()
+    print('hellow',name)
+def getname():
+    name = input('what is your name')
