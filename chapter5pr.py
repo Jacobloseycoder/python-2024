@@ -54,3 +54,55 @@ def tex():
 def kan():
     birds = 8000
     print('kansas has',birds,'birds')
+    
+def p6():
+    value = 3
+    show_double(value)
+def show_double(number):
+    result = number * 2
+    print(number, result)
+    
+def p7():
+    print('1 cup = 8 fluid ounces')
+    p7_1()
+def p7_1():
+    num = int(input('how  many cups do you want to convert to ounces'))
+    p7_2(num)
+def p7_2(cup):
+    tot = cup * 8
+    print(cup, 'cups are equal to',tot,'ounces')
+
+def p8():
+    num1 = int(input('what is the first number'))
+    num2 = int(input('what is the second number'))
+    print(p8_1(num1,num2))
+def p8_1(num1,num2):
+    num3 = num1 + num2
+    print(num3)
+    
+def p9():
+    fi = input('what is your first name')
+    la = input('what is your last name')
+    p9_1(fi,la)
+def p9_1(fi,la):
+    print('your name reversed is',la,fi)
+    
+def p10():
+    value = 99
+    print('the value is',value)
+    p10_1()
+    print('the value is',value)
+def p10_1():
+    value = 0
+    print('the value is',value)
+    
+def pp():
+    while 2 > 1:
+        print('gay')
+        
+def p11():
+    show(rate=0.01, periods=10, prin=10000.0)
+def p11_1(rate=0.01, periods=10, prin=10000.0):
+    intres = prin * rate * periods
+    
+    print('gay')
