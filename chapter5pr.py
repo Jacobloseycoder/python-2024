@@ -98,10 +98,41 @@ def p10_1():
     
 def pp():
     while 2 > 1:
-        print('gay')
+        print('pp')
         
 def p11():
     p11_1(rate=0.01, periods=10, prin=10000.0)
 def p11_1(rate=0.01, periods=10, prin=10000.0):
     intres = prin * rate * periods
     print('the intrest is $', format(intres, ',.2f'), sep='')
+
+mmm = 10
+def p13():
+    print(mmm)
+    
+nnn = 0
+def p14():
+    global nnn
+    nnn = int(input('what do you want?'))
+    globe()
+def globe():
+    print('the value is changed', end='')
+    print(' the value is', nnn)
+    
+cbr = .05
+def p15():
+    bone = int(input('what is the bonus'))
+    gross = int(input('what is the gross'))
+    p15_1(gross)
+    p15_2(bone)
+def p15_1(gross):
+    con = gross * cbr
+    print('the gross is',con)
+def p15_2(bone):
+    con = bone * cbr
+    print('the bounes is',con)
+    
+import random
+def p16():
+    number = random.randint(1,10)
+    print('the number is',number)
