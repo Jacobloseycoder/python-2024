@@ -101,7 +101,7 @@ def pp():
         print('gay')
         
 def p11():
-    show(rate=0.01, periods=10, prin=10000.0)
+    p11_1(rate=0.01, periods=10, prin=10000.0)
 def p11_1(rate=0.01, periods=10, prin=10000.0):
     intres = prin * rate * periods
     print('the intrest is $', format(intres, ',.2f'), sep='')
