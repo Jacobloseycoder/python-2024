@@ -1,3 +1,5 @@
+import random
+
 def p1():
     print('me is iornman')
     
@@ -132,7 +134,49 @@ def p15_2(bone):
     con = bone * cbr
     print('the bounes is',con)
     
-import random
 def p16():
     number = random.randint(1,10)
     print('the number is',number)
+    
+def p17():
+    x = 0
+    for x in range(5):
+        number = random.randint(1,100)
+        print('the number is',number)
+
+def p18():
+    x = 0
+    while x in range(5):
+        print(random.randint(1,100))
+        
+def p19():
+    x = 1
+    while x == 1:
+        number = random.randint(1,6)
+        number2 = random.randint(1,6)
+        print('the numbers are' ,number, 'and' ,number2)
+        an = input('do you want to continue n/y:')
+        if an == 'n' or an == 'N':
+            x = 2
+        elif an == 'y' or an == 'Y':
+            x = 1
+        else:
+            print('error')
+            x = 0
+            
+def p20():
+    for x in range(9):
+        number = random.randint(1,2)
+        if number == 1:
+            print('heads')
+        else:
+            print('tails')
+
+def p21():
+    random.seed(10)
+    print(random.randint(1,10))
+    print(random.randint(1,10))
+    print(random.randint(1,10))
+    
+def p22():
+    
