@@ -179,4 +179,10 @@ def p21():
     print(random.randint(1,10))
     
 def p22():
-    
+    age1 = input('what is your age')
+    age2 = input('what is your age')
+    p22_2(age1, age2)
+    print(total)
+def p22_2(age1, age2):
+    total = age1 + age2
+    return (total)
