@@ -185,4 +185,67 @@ def p22():
     print(total)
 def p22_2(age1, age2):
     total = age1 + age2
-    return (total)
+    return total
+
+discount = .20
+def p23():
+    num = p23_2()
+    sale = num - p23_3(num)
+    print('the price is ',sale)
+def p23_2():
+    num = float(input('what is its price'))
+    return num
+def p23_3(num):
+    return num * discount
+
+def p24():
+    month = p24_2()
+    addd = p24_3()
+    month = month - addd
+    if month < 0:
+        com = p24_4(month)
+        tot = month * com
+        print('you must pay back', tot)
+    else:
+        com = p24_4(month)
+        montt = month * com
+        tot = montt + month
+        print('the total pay is', tot)
+    
+def p24_2():
+    month = int(input('what is the total monthly sales'))
+    return month
+def p24_3():
+    addd = int(input('what is the advanced pay 0 for nun'))
+    return addd
+def p24_4(month):
+    com = 0
+    if month > 0:
+        if month < 10000:
+            com = .1
+        elif month < 10000 and month > 14999:
+            com = .12
+        elif month < 15000 and month > 17999:
+            com = .14
+        elif month < 18000 and month > 21999:
+            com = .16
+        else:
+            com = .18
+    else:
+        com = -1
+    return com
+
+def p25():
+    name = input("please enter your name: ")
+    return name
+
+def p26(num):
+    if (num % 2) == 0:
+        return True
+    else:
+        return False
+    
+def p27():
+    first = input("enter your first name: ")
+    last = input("enter your last name: ")
+    return first, last
