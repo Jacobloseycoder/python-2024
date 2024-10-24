@@ -1,4 +1,5 @@
 import random
+import math
 
 def p1():
     print('me is iornman')
@@ -249,3 +250,16 @@ def p27():
     first = input("enter your first name: ")
     last = input("enter your last name: ")
     return first, last
+
+def p28():
+    nom = int(input('enter a number'))
+    tot = math.sqrt(nom)
+    return tot
+
+def p29():
+   AAA = int(input('enter side A'))
+   BBB = int(input('enter side B'))
+   tot = math.hypot(AAA,BBB)
+   print('the hypotenuse is',tot)
+   
+def p30():
