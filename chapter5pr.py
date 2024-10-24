@@ -1,5 +1,7 @@
 import random
 import math
+import circle
+import rectangal
 
 def p1():
     print('me is iornman')
@@ -263,3 +265,4 @@ def p29():
    print('the hypotenuse is',tot)
    
 def p30():
+    
