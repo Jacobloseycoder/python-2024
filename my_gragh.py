@@ -1,5 +1,5 @@
 import turtle
-def p30(x, y, width, color):
+def square(x, y, width, color):
     turtle.penup()
     turtle.goto(x, y)
     turtle.fillcolor(color)
@@ -10,7 +10,7 @@ def p30(x, y, width, color):
         turtle.left(90)
     turtle.end_fill()
 
-def p31(x, y, radius, color):
+def circle(x, y, radius, color):
     turtle.penup()        
     turtle.goto(x, y - radius) 
     turtle.fillcolor(color)    
@@ -19,7 +19,7 @@ def p31(x, y, radius, color):
     turtle.circle(radius)      
     turtle.end_fill()          
 
-def p32(startX, startY, endX, endY, color):
+def line(startX, startY, endX, endY, color):
     turtle.penup()              
     turtle.goto(startX, startY) 
     turtle.pendown()            
