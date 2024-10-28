@@ -1,3 +1,3 @@
-while 2 > 1:
+def tt():
   print('im jacob losey')
   print('I have made things like')
