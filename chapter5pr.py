@@ -267,10 +267,10 @@ def p29():
    print('the hypotenuse is',tot)
    
 def p30():
-    my_gragh.square(-100,100,100,'grey')
+    my_gragh.square(-100,-100,200,'grey')
     my_gragh.circle(0,100,50,'blue')
     my_gragh.circle(-100,-100,50,'red')
     my_gragh.circle(100,-100,50,'green')
-    #my_gragh.line()
+    my_gragh.line(100,-100,-100,-100,'red')
     #my_gragh.line()
     #my_gragh.line()
