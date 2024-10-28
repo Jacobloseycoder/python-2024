@@ -272,5 +272,5 @@ def p30():
     my_gragh.circle(-100,-100,50,'red')
     my_gragh.circle(100,-100,50,'green')
     my_gragh.line(100,-100,-100,-100,'black')
-    my_gragh.line(-100,-100,25,100,'black')
-    my_gragh.line(25,100,100,-100,'black')
+    my_gragh.line(-100,-100,5,100,'black')
+    my_gragh.line(5,100,100,-100,'black')
