@@ -82,6 +82,7 @@ def ex4():
     cost = float(input('how much per gallon of paint'))
     galcost = gallion(wall, cost)
     labcost = laber(galcost, cost)
+    totalcost = totalll(labcost, galcost)
     print('the cost of paint for this project is',galcost,'$')
     print('the cost for laber is',labcost,'$')
 def gallion(wall, cost):
@@ -94,5 +95,6 @@ def laber(galcost, cost):
     lab = labb * 8
     labcost = lab * 35
     return labcost
-def totalll():
-    pass
+def totalll(labcost, galcost):
+    totalcost = labcost + galcost
+    return totalcost
