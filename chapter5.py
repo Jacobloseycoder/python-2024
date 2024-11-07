@@ -126,3 +126,16 @@ def quiz():
 def get_number():
     numbun = random.randint(1,200)
     return numbun
+
+def ex6():
+    loop()
+def loop():
+    tun = 1
+    while tun < 11:
+        dis = fall(tun)
+        print(tun,'sec       ',dis,'m')
+        tun = tun + 1
+def fall(tun):
+    time = tun ** 2
+    dis = .5 * 9.8 * time
+    return dis
