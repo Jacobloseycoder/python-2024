@@ -83,8 +83,11 @@ def ex4():
     galcost = gallion(wall, cost)
     labcost = laber(galcost, cost)
     totalcost = totalll(labcost, galcost)
+    print('the cost breacdown for' ,wall, 'square feet is')
+    print('-----------------------------------------------------')
     print('the cost of paint for this project is',galcost,'$')
     print('the cost for laber is',labcost,'$')
+    print('the total cost for the project is',totalcost,'$')
 def gallion(wall, cost):
     galneed = wall / 112
     galgal = math.ceil(galneed)
@@ -98,3 +101,28 @@ def laber(galcost, cost):
 def totalll(labcost, galcost):
     totalcost = labcost + galcost
     return totalcost
+
+def ex5():
+    quiz()
+def quiz():
+    tot = 0
+    go = 'y'
+    while go = y:
+        tot = tot - tot
+        numbun = get_number()
+        tot = tot + numbun
+        print(numbun)
+        print('+')
+        numbun = get_number()
+        tot = numbun + tot
+        print(numbun)
+        correct = input('anser hear:')
+        if correct = tot:
+            print('good job')
+            go = input('do you want to continue y/n')
+        else:
+            print('sorry no the asncer was',tot)
+            go = input('do you want to continue y/n')
+def get_number():
+    numbun = random.int(1,200)
+    return numbun
