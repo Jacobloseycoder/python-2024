@@ -107,7 +107,7 @@ def ex5():
 def quiz():
     tot = 0
     go = 'y'
-    while go = y:
+    while go == 'y':
         tot = tot - tot
         numbun = get_number()
         tot = tot + numbun
@@ -117,7 +117,7 @@ def quiz():
         tot = numbun + tot
         print(numbun)
         correct = input('anser hear:')
-        if correct = tot:
+        if correct == tot:
             print('good job')
             go = input('do you want to continue y/n')
         else:
