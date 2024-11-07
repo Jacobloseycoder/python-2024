@@ -131,11 +131,16 @@ def ex6():
     loop()
 def loop():
     tun = 1
+    print('this is how a item drops in 10 seconds')
+    print('-----------------------------------------')
     while tun < 11:
         dis = fall(tun)
-        print(tun,'sec       ',dis,'m')
+        print(format(tun,',.2f'),'s       ',format(dis,',.2f'),'m')
         tun = tun + 1
 def fall(tun):
     time = tun ** 2
     dis = .5 * 9.8 * time
     return dis
+
+def ex7():
+    
