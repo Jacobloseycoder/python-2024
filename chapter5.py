@@ -116,7 +116,7 @@ def quiz():
         numbun = get_number()
         tot = numbun + tot
         print(numbun)
-        correct = input('anser hear:')
+        correct = int(input('anser hear:'))
         if correct == tot:
             print('good job')
             go = input('do you want to continue y/n')
@@ -124,5 +124,5 @@ def quiz():
             print('sorry no the asncer was',tot)
             go = input('do you want to continue y/n')
 def get_number():
-    numbun = random.int(1,200)
+    numbun = random.randint(1,200)
     return numbun
