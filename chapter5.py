@@ -1,6 +1,8 @@
 import menu
 import random
 import math
+import my_gragh
+import turtle
 
 def main():
     menu.main
@@ -117,10 +119,240 @@ def ex5():
     else:
         print('not a option')
 def spock():
-    random.randint(1-5)
+    compute = random.randrange(1, 5)
+    if compute == 1:
+        print('computer chose rock')
+        print('you win')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose paper')
+        print('you loss')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose sizzers')
+        print('you win')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose lizzard')
+        print('you loss')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    else:
+        print('computer chose spock')
+        print('you tied')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
     #randomly generate a number between 1-5 and set it to a opption
 def rock():
+    compute = random.randrange(1, 5)
+    if compute == 1:
+        print('computer chose rock')
+        print('you tied')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose paper')
+        print('you loss')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose sizzers')
+        print('you win')
+        go = input('do you want to play agion Y/N')
+        if go =='Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose lizzard')
+        print('you win')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    else:
+        print('computer chose spock')
+        print('you loss')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
 def sisers():
+    compute = random.randrange(1, 5)
+    if compute == 1:
+        print('computer chose rock')
+        print('you loss')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose paper')
+        print('you win')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose sizzers')
+        print('you tied')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose lizzard')
+        print('you win')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    else:
+        print('computer chose spock')
+        print('you loss')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
 def paper():
+    compute = random.randrange(1, 5)
+    if compute == 1:
+        print('computer chose rock')
+        print('you win')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose paper')
+        print('you tied')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose sizzers')
+        print('you loss')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose lizzard')
+        print('you loss')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    else:
+        print('computer chose spock')
+        print('you win')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
 def lizzard():
+    compute = random.randrange(1, 5)
+    if compute == 1:
+        print('computer chose rock')
+        print('you loss')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose paper')
+        print('you win')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose sizzers')
+        print('you loss')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    elif compute == 2:
+        print('computer chose lizzard')
+        print('you tied')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
+    else:
+        print('computer chose spock')
+        print('you win')
+        go = input('do you want to play agion Y/N')
+        if go == 'Y':
+            ex5()
+        else:
+            print('ending')
 def nuke():
+    print('you win')
+
+def ex6():
+    bace()
+    mid()
+    head()
+    arm()
+    hat()
+    face()
+def bace():
+    my_gragh.circle(-50, -35, 80, 'blue')
+def mid():
+    my_gragh.circle(-50, 100, 60, 'blue')
+def head():
+    my_gragh.circle(-50, 200, 40, 'blue')
+def arm():
+    my_gragh.line(10, 100, 200, 200, 'black')
+    my_gragh.line(200, 200, 220, 210, 'black')
+    my_gragh.line(200, 200, 200, 210, 'black')
+    my_gragh.line(-110, 100, -200, 200, 'black')
+    my_gragh.line(-200, 200, -220, 210, 'black')
+    my_gragh.line(-200, 200, -200, 210, 'black')
+def hat():
+    my_gragh.square(-70, 230, 40, 'red')
+def face():
+    pass
