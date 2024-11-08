@@ -83,11 +83,8 @@ def ex4():
     galcost = gallion(wall, cost)
     labcost = laber(galcost, cost)
     totalcost = totalll(labcost, galcost)
-    print('the cost breacdown for' ,wall, 'square feet is')
-    print('-----------------------------------------------------')
     print('the cost of paint for this project is',galcost,'$')
     print('the cost for laber is',labcost,'$')
-    print('the total cost for the project is',totalcost,'$')
 def gallion(wall, cost):
     galneed = wall / 112
     galgal = math.ceil(galneed)
@@ -103,44 +100,27 @@ def totalll(labcost, galcost):
     return totalcost
 
 def ex5():
-    quiz()
-def quiz():
-    tot = 0
-    go = 'y'
-    while go == 'y':
-        tot = tot - tot
-        numbun = get_number()
-        tot = tot + numbun
-        print(numbun)
-        print('+')
-        numbun = get_number()
-        tot = numbun + tot
-        print(numbun)
-        correct = int(input('anser hear:'))
-        if correct == tot:
-            print('good job')
-            go = input('do you want to continue y/n')
-        else:
-            print('sorry no the asncer was',tot)
-            go = input('do you want to continue y/n')
-def get_number():
-    numbun = random.randint(1,200)
-    return numbun
-
-def ex6():
-    loop()
-def loop():
-    tun = 1
-    print('this is how a item drops in 10 seconds')
-    print('-----------------------------------------')
-    while tun < 11:
-        dis = fall(tun)
-        print(format(tun,',.2f'),'s       ',format(dis,',.2f'),'m')
-        tun = tun + 1
-def fall(tun):
-    time = tun ** 2
-    dis = .5 * 9.8 * time
-    return dis
-
-def ex7():
-    
+    #make them pick sumthing call thats task
+    ch = input('select your wepion: rock, paper, sissers, lizzard, spock')
+    if ch == 'spock':
+        spock()
+    elif ch == 'sissers':
+        sisers()
+    elif ch == 'rock':
+        rock()
+    elif ch == 'paper':
+        paper()
+    elif ch == 'lizzard':
+        lizzard()
+    elif ch == 'nuke':
+        nuke()
+    else:
+        print('not a option')
+def spock():
+    random.randint(1-5)
+    #randomly generate a number between 1-5 and set it to a opption
+def rock():
+def sisers():
+def paper():
+def lizzard():
+def nuke():
