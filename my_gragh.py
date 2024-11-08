@@ -1,5 +1,6 @@
 import turtle
 def square(x, y, width, color):
+    turtle.speed(0)
     turtle.penup()
     turtle.goto(x, y)
     turtle.fillcolor(color)
@@ -11,6 +12,7 @@ def square(x, y, width, color):
     turtle.end_fill()
 
 def circle(x, y, radius, color):
+    turtle.speed(0)
     turtle.penup()        
     turtle.goto(x, y - radius) 
     turtle.fillcolor(color)    
@@ -20,6 +22,7 @@ def circle(x, y, radius, color):
     turtle.end_fill()          
 
 def line(startX, startY, endX, endY, color):
+    turtle.speed(0)
     turtle.penup()              
     turtle.goto(startX, startY) 
     turtle.pendown()            
