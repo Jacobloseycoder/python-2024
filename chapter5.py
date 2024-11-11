@@ -360,5 +360,5 @@ def face():
     my_gragh.line(-70, 190, -15, 190, 'black')
     my_gragh.circle(-70, 200, 5, 'black')
     my_gragh.circle(-40, 200, 5, 'black')
-    my_gragh.line(-15, 190, 10, 160, 'black')
-    
+    my_gragh.line(-15, 190, 20, 190, 'brown')
+    my_gragh.square(20, 190, 4, 'brown')
