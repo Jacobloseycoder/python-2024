@@ -357,4 +357,8 @@ def hat():
     my_gragh.square(-90, 230, 20, 'red')
     my_gragh.square(-30, 230, 20, 'red')
 def face():
-    my_gragh.line(-70, 190, -10, 190, 'black')
+    my_gragh.line(-70, 190, -15, 190, 'black')
+    my_gragh.circle(-70, 200, 5, 'black')
+    my_gragh.circle(-40, 200, 5, 'black')
+    my_gragh.line(-15, 190, 0, 210, 'black')
+    
