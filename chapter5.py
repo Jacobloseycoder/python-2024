@@ -366,8 +366,8 @@ def face():
     my_gragh.circle(20, 230, 5, 'gray')
     
 def ex7():
-    my_gragh.square(-50, 50, 40, 'black')
-    my_gragh.square(-10, 50, 40, 'white')
-    my_gragh.square(30, 50, 40, 'black')
-    my_gragh.square(70, 50, 40, 'white')
-    my_gragh.square(110, 50, 40, 'black')
+    my_gragh.square(-50, 50, 50, 'black')
+    my_gragh.square(0, 50, 50, 'white')
+    my_gragh.square(50, 50, 50, 'black')
+    my_gragh.square(100, 50, 50, 'white')
+    my_gragh.square(150, 50, 50, 'black')
