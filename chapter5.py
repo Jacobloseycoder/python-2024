@@ -354,5 +354,7 @@ def arm():
     my_gragh.line(-200, 200, -200, 210, 'black')
 def hat():
     my_gragh.square(-70, 230, 40, 'red')
+    my_gragh.square(-100, 230, 40, 'red')
+    my_gragh.square(-30, 230, 40, 'red')
 def face():
     pass
