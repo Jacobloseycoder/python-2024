@@ -377,5 +377,9 @@ def printer(tim):
         my_gragh.square(x, y, 50, collor)
     tim = tim + 1
 def color(collor):
-    if collor = 1:
-        
+    if gim = 1:
+        collor = 'black'
+        gim = 2
+    else:
+        collor = 'white'
+        gim = 1
