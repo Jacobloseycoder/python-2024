@@ -370,22 +370,26 @@ def ex7():
     printer(tt)
 def printer(tt):
     collor = 'black'
+    gim = 1
     pp = 1
     x = -50
     y = 50
     while tt < 5:
         while pp < 5:
-            color(collor)
+            color(collor, gim)
             my_gragh.square(x, y, 50, collor)
             x = x + 50
             pp = pp + 1
         tt = tt + 1
         y = y - 50
         
-def color(collor):
-    gim = 1
+def color(collor, gim):
+    if collor == 'black':
+        gim == 2
+    else:
+        gim == 1
     if gim == 1:
-        collor = 'black'
+        collor == 'black'
         gim == 2
         return collor
     else:
