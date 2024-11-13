@@ -376,25 +376,19 @@ def printer(tt):
     y = 50
     while tt < 5:
         while pp < 5:
-            color(collor, gim)
+            collor = color(collor)
             my_gragh.square(x, y, 50, collor)
             x = x + 50
             pp = pp + 1
         tt = tt + 1
         y = y - 50
-        pp = 1
+        pp = 0
         x = -50
         
-def color(collor, gim):
+def color(collor):
     if collor == 'black':
-        gim == 2
-    else:
-        gim == 1
-    if gim == 1:
-        collor == 'black'
-        gim == 2
+        collor == 'white'
         return collor
     else:
-        collor = 'white'
-        gim == 1
+        collor == 'black'
         return collor
