@@ -369,7 +369,7 @@ def ex7():
     tt = 0
     printer(tt)
 def printer(tt):
-    cut = 1
+    cut = 2
     gim = 1
     pp = 0
     x = -50
