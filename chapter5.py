@@ -5,8 +5,27 @@ import my_gragh
 import turtle
 
 def main():
-    menu.main
-
+    menu.main(choice)
+    if choice == 1:
+        ex1()
+    elif choice == 2:
+        ex2()
+    elif choice == 3:
+        ex3()
+    elif choice == 4:
+        ex4()
+    elif choice == 5:
+        ex5()
+    elif choice == 6:
+        ex6()
+    elif choice == 7:
+        ex7()
+    elif choice == 8:
+        ex8()
+    elif choice == 9:
+        ex9()
+    else:
+        print('ending')
 def ex1():
     amount = float(input('what was the cost'))
     mun = state(amount)
