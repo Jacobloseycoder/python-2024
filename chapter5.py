@@ -376,7 +376,7 @@ def printer(tt):
     y = 50
     while tt < 5:
         while pp < 5:
-            collor = color(cut)
+            collor, cut = color(cut)
             my_gragh.square(x, y, 50, collor)
             x = x + 50
             pp = pp + 1
@@ -388,11 +388,11 @@ def printer(tt):
 def color(cut):
     if cut == 1:
         collor = 'white'
-        cut == 2
-        return collor
+        cut = 2
+        return collor, cut
     elif cut == 2:
-        cut == 1
+        cut = 1
         collor = 'black'
-        return collor
+        return collor, cut
     else:
         print('utooh')
