@@ -382,6 +382,7 @@ def printer(tt):
             pp = pp + 1
         tt = tt + 1
         y = y - 50
+        pp = 1
         
 def color(collor, gim):
     if collor == 'black':
