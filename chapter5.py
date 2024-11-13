@@ -369,14 +369,14 @@ def ex7():
     tt = 0
     printer(tt)
 def printer(tt):
-    collor = 'black'
+    cut = 1
     gim = 1
     pp = 0
     x = -50
     y = 50
     while tt < 5:
         while pp < 5:
-            collor = color(collor)
+            collor = color(cut)
             my_gragh.square(x, y, 50, collor)
             x = x + 50
             pp = pp + 1
@@ -385,10 +385,14 @@ def printer(tt):
         pp = 0
         x = -50
         
-def color(collor):
-    if collor == 'black':
-        collor == 'white'
+def color(cut):
+    if cut == 1:
+        collor = 'white'
+        cut == 2
+        return collor
+    elif cut == 2:
+        cut == 1
+        collor = 'black'
         return collor
     else:
-        collor == 'black'
-        return collor
+        print('utooh')
