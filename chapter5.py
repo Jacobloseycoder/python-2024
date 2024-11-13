@@ -366,12 +366,12 @@ def face():
     my_gragh.circle(20, 230, 5, 'gray')
     
 def ex7():
-    tt = 1
+    tt = 0
     printer(tt)
 def printer(tt):
     collor = 'black'
     gim = 1
-    pp = 1
+    pp = 0
     x = -50
     y = 50
     while tt < 5:
@@ -383,6 +383,7 @@ def printer(tt):
         tt = tt + 1
         y = y - 50
         pp = 1
+        x = -50
         
 def color(collor, gim):
     if collor == 'black':
