@@ -5,7 +5,7 @@ import my_gragh
 import turtle
 
 def main():
-    menu.main(choice)
+    choice = menu.main()
     if choice == 1:
         ex1()
     elif choice == 2:
