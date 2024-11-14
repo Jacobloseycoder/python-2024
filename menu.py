@@ -9,5 +9,5 @@ def main():
     print('7. rock,paper,scissors,lizzard,spock')
     print('8. snowman')
     print('9. checers bord')
-    choice = input('enter choice:')
+    choice = int(input('enter choice:'))
     return choice
