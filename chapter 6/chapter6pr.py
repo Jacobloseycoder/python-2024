@@ -29,3 +29,19 @@ def p4():
     myfile.write(n2 + '\n')
     myfile.write(n3 + '\n')
     myfile.close()
+    
+def p5():
+    infile = open('ttt.txt','r')
+    line1 = infile.readline()
+    line2 = infile.readline()
+    line3 = infile.readline()
+    line = infile.readline().rstrip()
+    print(line1, end = '')
+    line = infile.readline().rstrip()
+    print(line2, end = '')
+    line = infile.readline().rstrip()
+    print(line3, end = '')
+    infile.close()
+    
+def p6():
+    pass
