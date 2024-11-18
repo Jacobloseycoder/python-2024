@@ -44,4 +44,24 @@ def p5():
     infile.close()
     
 def p6():
+    nu1 = int(input('enter a number'))
+    nu2 = int(input('enter a number'))
+    nu3 = int(input('enter a number'))
+    file = open('number.txt')
+    file.write(str(nu1) + '\n')
+    file.write(str(nu2) + '\n')
+    file.write(str(nu3) + '\n')
+    file.close()
+    
+def p7():
+    file = open('number.txt')
+    nu1 = int(infile.readline())
+    nu2 = int(infile.readline())
+    nu3 = int(infile.readline())
+    line = infile.readline().rstrip()
+    file.close()
+    total = nu1 + nu2 + nu3
+    print(nu1, '+',nu2,'+',nu3,'=',total)
+    
+def p8():
     pass
