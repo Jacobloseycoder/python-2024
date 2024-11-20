@@ -98,4 +98,9 @@ def p11():
     print('all data is stored in video_times.txt')
     
 def p12():
-    pass
+    vid_times = open('video_times.txt', 'w')
+    counter = 1
+    total = 0
+    for time in vid_files:
+        running_times = float(time.rstrip('\n'))
+        
