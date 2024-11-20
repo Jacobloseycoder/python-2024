@@ -64,4 +64,38 @@ def p7():
     print(nu1, '+',nu2,'+',nu3,'=',total)
     
 def p8():
+    num_days = int(input("How many days to you want to enter sales for? "))
+    sales_file = open('sales.txt', 'w')
+    for day in range(1, num_days + 1):
+        sales = float(input("Enter the sales for day #" + str(day) + ": "))
+        sales_files.write(str(sales) + "\n")
+    sales_files.close
+    print("All data has been saved to sales.txt.")
+    
+def p9():
+    sales_file = open('sales.txt', 'r')
+    line = sales_file.readline()
+    while line != '':
+        amount = float(line)
+        print (format (amount, ',.2f'))
+        line = sales_file.readline()
+    sales_file.close()
+    
+def p10():
+    sales_file = open('sales.txt', 'r')
+    for line in sales_file:
+        amount = float(line)
+        print(format(amount, ',.2f'))
+    sales_file.close()
+    
+def p11():
+    num_vid = int(input("how many videos are in the project"))
+    vid_files = open('video_times.txt', 'w')
+    for video in range(1, num_vid + 1):
+        time = int(input("enter the time of the video #" + str(video) + ': '))
+        vid_file.write(str(time) + '\n')
+    vid_file.close()
+    print('all data is stored in video_times.txt')
+    
+def p12():
     pass
