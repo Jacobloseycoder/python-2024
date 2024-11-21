@@ -139,4 +139,16 @@ def p14():
     emp_file.close()
 
 def p15():
+    another = 'y'
+    coffee_file = open("coffee.txt", "a")
+    while another. lower() == 'y':
+        print("Enter the following coffee data: \n") desc= input("Description: ")
+        pounds = input("Quantity (in pounds): ")
+        coffee_file.write(desc + '\n') 
+        coffee_file.write(pounds + '\n')
+        another = input("\nDo you wish to enter another coffee? (y to continue): ")
+    coffee_file.close()
+    print("\nAll data appended to coffee.txt.")
+
+def p16():
     pass
