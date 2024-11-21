@@ -103,4 +103,25 @@ def p12():
     total = 0
     for time in vid_files:
         running_times = float(time.rstrip('\n'))
-        
+        print("video #" + str(counter) + " time:", running_time, "seconds")
+        counter += 1
+        total += running_time
+    print("The total running time of all videos is: ", total,"seconds.")
+
+def p13():
+    num_emps = int(input("how many employee records do you want to enter? "))
+    while num_emps < 1:
+        num_emps = int(input("enter a valid # of employes: "))
+    emp_files = open('employee.txt', 'w')
+    for records in range(1, num_emps +1):
+        print("\nEnter data for employee #" + str(record) + ": ")
+        name = input("name: ")
+        id_num = input("ID number: ")
+        dept = input("department: ")
+        emp_files.write(name + '\n')
+        emp_files.write(id_num + '\n')
+        emp_files.write(dept + '\n')
+    emp_files.close()
+
+def p14():
+    pass
