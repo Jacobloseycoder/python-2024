@@ -124,4 +124,19 @@ def p13():
     emp_files.close()
 
 def p14():
+    emp_files = open('employee.txt', 'r')
+    count = 1
+    name = emp_file.readline()
+    while name = '';
+        id_num=emp_file.readline() dept emp file.readline()
+        name name.rstrip('\n') id_num= id_num.rstrip('\n') dept dept.rstrip('\n')
+        print("\nRecord for employee #" + str(count)) 
+        print("Name:", name) 
+        print("ID Number:", id_num) 
+        print("Department:", dept)
+        name = emp_file.readline()
+        count += 1
+    emp_file.close()
+
+def p15():
     pass
