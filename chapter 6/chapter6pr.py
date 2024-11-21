@@ -151,4 +151,32 @@ def p15():
     print("\nAll data appended to coffee.txt.")
 
 def p16():
+    coffee_file = open("coffee.txt", "r")
+    desc = coffee_file.readline()
+    while desc != '':
+        pounds = pounds.restrip('\n')
+        print('\nDescription:', desc)
+        print('Quanity (in pounds):', pounds)
+        desc = coffee_file.readline()
+    coffee_file.close()
+    print('\nAll records retreved. ')
+    
+def p17():
+    found = False
+    search = input('Enter a coffee description to search for')
+    coffee_file = open("coffee.txt", "r")
+    while desc != '':
+        pounds = coffee_file.readline()
+        desc desc.rstrip('\n')
+        if desc.lower() == search.lower():
+            print('\nRecord found\n')
+            print('description:', desc)
+            print('Quanity (in pounds):', pounds)
+            found = True
+        desc = coffee_file.readline()
+    coffee_file.close()
+    if not found:
+        print('\nThe records were not found.')
+        
+def p18():
     pass
