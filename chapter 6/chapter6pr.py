@@ -179,4 +179,63 @@ def p17():
         print('\nThe records were not found.')
         
 def p18():
-    pass
+    found = False
+    search = input("enter the coffee description to moddify")
+    new_qty = input("Enter the new quanity")
+    coffee_file = open('coffee.txt', 'r')
+    temp_file = open('temp.txt', 'w')
+    desc = coffee_file.readline()
+    while desc != '':
+        qty = coffee_file.readline()
+        desc = desc.rstrip('\n')
+        qty = qty.rstrip('\n')
+        if search.lower() == desc.lower():
+            temp_file.write(desc + '\n')
+            temp_file.write(new_qty + '\n')
+            found = True
+        else:
+            temp_file.write(desc + '\n')
+            temp_file.write(qty + '\n')
+        desc = coffee_file.readline()
+    coffee_file.close
+    temp_file.close
+    os.remove('coffee.txt')
+    os.rename('temp.txt', 'coffee.txt')
+    if found == False:
+        print('\nRecord not found')
+    else:
+        print('The quanity for', search,'has been updated to',new_qty,'pounds')
+        
+def p20():
+    num1 = int(input('enter a number'))
+    num2 = int(input('enter a number'))
+    resalts = num1 / num2
+    print(num1,'devided by',num2,'is',resalts)
+    
+def p21():
+    num1 = int(input('enter a number'))
+    num2 = int(input('enter a number'))
+    if num2 != 0:
+        resalts = num1 / num2
+        print(num1,'devided by',num2,'is',resalts)
+    else:
+        print("can't devide by 0")
+        
+def p22():
+    hours = int(input('enter the number of houers worked: '))
+    rate = float(input('enter the pay rate'))
+    pay = hours * rate
+    print("Gross pay: $", format(pay, ',.2f'), sep = '')
+    
+def p23():
+    try:
+        hours = int(input('enter the number of houers worked: '))
+        rate = float(input('enter the pay rate'))
+        pay = hours * rate
+        print("Gross pay: $", format(pay, ',.2f'), sep = '')
+    except ValueError:
+        print("Error: Hours worked and rate has to be a valid number")
+        
+def p24():
+    filename = input("Enter filename to start: ")
+    infile = open(f mng3w2q1	`
