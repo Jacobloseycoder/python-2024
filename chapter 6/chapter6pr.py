@@ -238,4 +238,33 @@ def p23():
         
 def p24():
     filename = input("Enter filename to start: ")
-    infile = open(f mng3w2q1	`
+    infile = open(filename, 'r')
+    cont = infile.read()
+    print(cont)
+    infile.close()
+    
+def p25():
+    filename = input("Enter filename to start: ")
+    try:
+        infile = open(filename, 'r')
+        cont = infile.read()
+        print(cont)
+        infile.close()
+    except IOError:
+        print("file does not exsist.")
+
+def p26():
+    total = 0
+    try:
+        infile = open('sales_data.txt', 'r')
+        for line in infile:
+            amount = float(line)
+            total += amount
+        infile.close
+        print(format(total, ',.2f'))
+    except IOError:
+        ('Error')
+    except ValueError:
+        ('Error')
+    except:
+        ('Big ugh oh')
