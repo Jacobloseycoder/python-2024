@@ -11,6 +11,7 @@ def w1():
     infile.close()
     
 def w2():
+    #needs to make it print error script
     files = input('what file are you looking for:')
     try:
         number = 0
