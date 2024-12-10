@@ -8,3 +8,6 @@ def w1():
         number = number + 1
         print(number,':   ',lines)
     infile.close()
+    
+def w2():
+    
