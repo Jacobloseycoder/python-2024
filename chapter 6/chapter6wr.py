@@ -25,4 +25,14 @@ def w2():
         ('file is not hear.')
 
 def w3():
-    
+    #needs to test and add error
+    files = input('what file are you looking for:')
+    number = 0
+    infile = open(files, 'r')
+    lines = infile.readline()
+    tot = tot + lines
+    while lines != '':
+        lines = infile.readline()
+        tot = tot + lines
+        num = num + 1
+    print('the total number of items is',num,'and the advrige is',tot)
