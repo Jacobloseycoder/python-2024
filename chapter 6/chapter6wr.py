@@ -28,15 +28,23 @@ def w3():
     #needs to test
     files = input('what file are you looking for:')
     try:
-        number = 0
+        tot = 0
+        tot = int(tot)
+        num = 0
+        num = int(num)
         infile = open(files, 'r')
         lines = infile.readline()
+        lines = lines.rstrip('\n')
+        lines = int(lines)
         tot = tot + lines
         while lines != '':
-            lines = infile.readline()
+            lines = lines.rstrip('\n')
+            lines = int(lines)
             tot = tot + lines
             num = num + 1
+            lines = infile.readline()
         big = tot / num
+        infile.close()
         print('the total number of items is',tot,'and the advrige is',big)
-    except:
+    except IOError:
         print('file is not hear.')
