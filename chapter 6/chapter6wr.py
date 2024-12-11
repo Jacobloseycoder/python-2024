@@ -11,7 +11,6 @@ def w1():
     infile.close()
     
 def w2():
-    #needs to make it print error script
     files = input('what file are you looking for:')
     try:
         number = 0
@@ -20,9 +19,10 @@ def w2():
         while lines != '':
             lines = infile.readline()
             number = number + 1
+        infile.close()
         print('the number of lines is', number)
     except:
-        ('file is not hear.')
+        print('file is not hear.')
 
 def w3():
     #needs to test, add error script, and download numbers from Chapter 6 Programming Exercises
