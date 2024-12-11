@@ -23,3 +23,6 @@ def w2():
         print('the number of lines is', number)
     except:
         ('file is not hear.')
+
+def w3():
+    
