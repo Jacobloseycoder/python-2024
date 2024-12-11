@@ -25,7 +25,7 @@ def w2():
         ('file is not hear.')
 
 def w3():
-    #needs to test and add error
+    #needs to test, add error script, and download numbers from Chapter 6 Programming Exercises
     files = input('what file are you looking for:')
     number = 0
     infile = open(files, 'r')
