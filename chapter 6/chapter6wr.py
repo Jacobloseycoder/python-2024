@@ -25,14 +25,18 @@ def w2():
         print('file is not hear.')
 
 def w3():
-    #needs to test, add error script, and download numbers from Chapter 6 Programming Exercises
+    #needs to test
     files = input('what file are you looking for:')
-    number = 0
-    infile = open(files, 'r')
-    lines = infile.readline()
-    tot = tot + lines
-    while lines != '':
+    try:
+        number = 0
+        infile = open(files, 'r')
         lines = infile.readline()
         tot = tot + lines
-        num = num + 1
-    print('the total number of items is',num,'and the advrige is',tot)
+        while lines != '':
+            lines = infile.readline()
+            tot = tot + lines
+            num = num + 1
+        big = tot / num
+        print('the total number of items is',tot,'and the advrige is',big)
+    except:
+        print('file is not hear.')
