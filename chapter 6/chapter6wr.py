@@ -26,7 +26,6 @@ def w2():
         print('file is not hear.')
 
 def w3():
-    #needs to test
     files = input('what file are you looking for:')
     try:
         tot = 0
@@ -53,6 +52,6 @@ def w4():
     gen = input("how many numbers do you want to make:")
     infile = open('random.txt','w')
     while gogo != gen:
-        mom = random.randrange(1, 500)
+        mom = str(random.randrange(1, 500))
         infile.write(mom)
     infile.close()
