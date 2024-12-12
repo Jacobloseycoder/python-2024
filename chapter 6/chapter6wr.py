@@ -48,10 +48,18 @@ def w3():
         print('file is not hear.')
         
 def w4():
-    gogo = 0
-    gen = input("how many numbers do you want to make:")
-    infile = open('random.txt','w')
-    while gogo != gen:
-        mom = str(random.randrange(1, 500))
-        infile.write(mom)
-    infile.close()
+    gogo = int(0)
+    gen = int(input("how many numbers do you want to make:"))
+    try:
+        infile = open('random.txt','w')
+        while gogo < gen:
+            mom = str(random.randrange(1, 500))
+            infile.write(mom)
+            gogo = gogo + 1
+            print('all numbers writen')
+        infile.close()
+    except IOError:
+        print('file is not hear.')
+        
+def w5():
+    
