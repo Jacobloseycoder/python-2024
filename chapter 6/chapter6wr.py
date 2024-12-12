@@ -1,5 +1,6 @@
 import os
 import menu
+import random
 def w1():
     number = 1
     infile = open('steps.txt','r')
@@ -35,16 +36,23 @@ def w3():
         infile = open(files, 'r')
         lines = infile.readline()
         lines = lines.rstrip('\n')
-        lines = int(lines)
-        tot = tot + lines
         while lines != '':
-            lines = lines.rstrip('\n')
             lines = int(lines)
             tot = tot + lines
             num = num + 1
             lines = infile.readline()
+            lines = lines.rstrip('\n')
         big = tot / num
         infile.close()
-        print('the total number of items is',tot,'and the advrige is',big)
+        print('the total number of items is',num,'and the advrige is',big)
     except IOError:
         print('file is not hear.')
+        
+def w4():
+    gogo = 0
+    gen = input("how many numbers do you want to make:")
+    infile = open('random.txt','w')
+    while gogo != gen:
+        mom = random.randrange(1, 500)
+        infile.write(mom)
+    infile.close()
