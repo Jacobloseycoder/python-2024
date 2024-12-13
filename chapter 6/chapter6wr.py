@@ -3,8 +3,10 @@ import menu
 import random
 def w1():
     number = 1
+    #opens file
     infile = open('steps.txt','r')
     lines = infile.readline()
+    #prints the number and 
     while lines != '':
         print(number,':   ',lines)
         number = number + 1
