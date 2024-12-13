@@ -6,11 +6,12 @@ def w1():
     #opens file
     infile = open('steps.txt','r')
     lines = infile.readline()
-    #prints the number and 
+    #prints the steps and days
     while lines != '':
         print(number,':   ',lines)
         number = number + 1
         lines = infile.readline()
+        #closes the file
     infile.close()
     
 def w2():
