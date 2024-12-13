@@ -48,6 +48,7 @@ def w3():
         print('file is not hear.')
         
 def w4():
+    #test
     gogo = int(0)
     gen = int(input("how many numbers do you want to make:"))
     try:
@@ -62,6 +63,7 @@ def w4():
         print('file is not hear.')
         
 def w5():
+    #test
     tot = 0
     tot = int(tot)
     num = 0
