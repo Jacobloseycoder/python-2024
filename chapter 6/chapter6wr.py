@@ -62,4 +62,18 @@ def w4():
         print('file is not hear.')
         
 def w5():
-    
+    tot = 0
+    tot = int(tot)
+    num = 0
+    num = int(num)
+    infile = open(random.txt, 'r')
+    lines = infile.readline()
+    lines = lines.rstrip('\n')
+    while lines != '':
+        lines = int(lines)
+        tot = tot + lines
+        num = num + 1
+        print(lines)
+        lines = infile.readline()
+        lines = lines.rstrip('\n')
+    print('the total the',num,'random numbers is:',tot)
