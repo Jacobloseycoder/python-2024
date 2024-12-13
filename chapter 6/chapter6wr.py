@@ -34,24 +34,37 @@ def w2():
         print('file is not hear.')
 
 def w3():
+    #asks for the file
     files = input('what file are you looking for:')
     try:
+        #turns values into int
         tot = 0
         tot = int(tot)
         num = 0
         num = int(num)
+        #opens file
         infile = open(files, 'r')
         lines = infile.readline()
         lines = lines.rstrip('\n')
+        #loopdy loop
         while lines != '':
+            #turns line to int
             lines = int(lines)
+            #adds to the total
             tot = tot + lines
+            #adds to the number of lines
             num = num + 1
+            #reads lines
             lines = infile.readline()
+            #help lets the lines be int
             lines = lines.rstrip('\n')
+        #gets the adverige
         big = tot / num
+        #closes file
         infile.close()
+        #prints the number of items and advrige
         print('the total number of items is',num,'and the advrige is',big)
+    #incase of nonreal file
     except IOError:
         print('file is not hear.')
         
