@@ -11,20 +11,25 @@ def w1():
         print(number,':   ',lines)
         number = number + 1
         lines = infile.readline()
-        #closes the file
+    #closes the file
     infile.close()
     
 def w2():
+    #asks for the file to open
     files = input('what file are you looking for:')
     try:
         number = 0
+        #opens the file
         infile = open(files, 'r')
         lines = infile.readline()
+        #counts the number of lines
         while lines != '':
             lines = infile.readline()
             number = number + 1
+        #closes the file
         infile.close()
         print('the number of lines is', number)
+    #if they try to use a nunesisting file prints a error
     except:
         print('file is not hear.')
 
