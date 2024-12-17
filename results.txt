@@ -1,0 +1,5 @@
+{name}: {score}/5
+timm: 5/5
+timm: 5/5
+rr: 5/5
+yy: 5/5
