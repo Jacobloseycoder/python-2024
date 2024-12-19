@@ -16,10 +16,25 @@ def game_loop():
     gog = input('select enter to start:')
     while gog != '':
         gog = input('select enter to start:')
-    if gog == '':
+    if gog == 'no':
         while end == 'no':
-            end = encounter()
-        game_over(name, weapon)
+            encounter()
+            print('what do you do')
+            print('1)fight')
+            print('2)run')
+            gg = input('select here:')
+            if gg == 1:
+                num = random.randint(1,5)
+                if num == 1:
+                    print('you dead')
+                    end = 'yes'
+                    game_over(name, weapon)
+                else:
+                    print('you win the fight')
+            elif gg == 2:
+                print('you ran away')
+                print('but then')
+                end = 'no'
 def get_name(name):
     name = input('what is your name:')
     return name
