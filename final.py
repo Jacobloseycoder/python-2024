@@ -1,8 +1,11 @@
 import random
 def game_loop():
     name = ''
+    weapon = ''
+    gog = 'no'
+    end = 'no'
     print("\nWelcome adventurer.")
-    get_name(name)
+    name = get_name(name)
     
     # get the name and weapon here
     
@@ -11,11 +14,11 @@ def game_loop():
     print("Before you is a path that you must take to reach the next town.")
     print("However, there are monsters roaming the path up ahead, and you")
     print("must be prepared to battle!")
-    get_weapon(weapon)
+    weapon = get_weapon(weapon)
     print("I see you have your trusty ", weapon, ". You will need it.", sep="")
-    gog = input('select enter to start:')
-    while gog != '':
-        gog = input('select enter to start:')
+    gggg = input('select enter to start:')
+    while gggg != '':
+        gggg = input('select enter to start:')
     if gog == 'no':
         while end == 'no':
             encounter()
@@ -38,7 +41,7 @@ def game_loop():
 def get_name(name):
     name = input('what is your name:')
     return name
-def get_weapon():
+def get_weapon(weapon):
     weapon = input('enter what weapon you want:')
     return weapon
 def encounter():
@@ -46,9 +49,10 @@ def encounter():
     encout = random.randint(1,3)
     if encout == 1:
         infile = open('monster1.txt', 'r')
+        file = infile.readline()
         while file != '':
-            file = infle.readline()
             print(file)
+            file = infle.readline()
     elif encout == 2:
         infile = open('monster2.txt', 'r')
         while file != '':
@@ -62,7 +66,7 @@ def encounter():
     else:
         print('error')
 def previous_adventurer():
-    infile = open('', 'r')
+    infile = open('pre', 'r')
     while file != '':
             file = infle.readline()
             print(file)
@@ -81,6 +85,6 @@ def main():
     else:
         print('erorr not a option')
 def game_over(name, weapon):
-    infile = open('', 'a+')
+    infile = open('pre', 'a+')
     infile.write('name:',name + '\n')
     infile.write('weapon',weapon + '\n')
