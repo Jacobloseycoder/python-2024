@@ -87,3 +87,14 @@ def p10():
     mylist.append(8)
     #.append adds the number to the end of the list
     print(mylist)
+    
+def p11():
+    mylist = []
+    name = input('enter a name')
+    mylist.append(name)
+    agion = input('do you want to add another name')
+    while agion == 'Y' or agion == 'y':
+        name = input('enter a name')
+        mylist.append(name)
+        agion = input('do you want to add another name')
+    print(mylist)
