@@ -98,3 +98,34 @@ def p11():
         mylist.append(name)
         agion = input('do you want to add another name')
     print(mylist)
+    
+def p12():
+    #needs to be fixed
+    mylist = ['cat', 'dog', 'fish']
+    find = input('what are you looking for')
+    if find not in mylist:
+        print('item not found')
+    else:
+        food = input('what do you want to replace it with')
+        findd = mylist.index(find)
+        #finds the spot a item is in
+        mylist = mylist.remove(find)
+        #removes a item
+        mylist.insert(findd, food)
+        #inserts a item at a serten spot
+        print(mylist)
+        
+def p13():
+    names = ['tony', 'sam', 'jeff']
+    print('the list of names are', names)
+    names.insert(2, 'bill')
+    print(names)
+    
+def p14():
+    mylist = [9, 6, 7, 8]
+    print(mylist)
+    mylist.reverse()
+    print(mylist)
+    
+def p15():
+    
