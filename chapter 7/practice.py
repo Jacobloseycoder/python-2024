@@ -208,4 +208,4 @@ def p22_2(mylist):
     return math
 
 def p23():
-    
+    pass
