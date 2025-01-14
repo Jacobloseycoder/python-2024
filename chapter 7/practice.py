@@ -206,3 +206,6 @@ def p22_2(mylist):
         math = math + index
         index = []
     return math
+
+def p23():
+    
