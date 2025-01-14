@@ -128,4 +128,81 @@ def p14():
     print(mylist)
     
 def p15():
+    mylist = [1, 2, 3, 4, 5]
+    del mylist[2]
+    print(mylist)
+    print('lowest value is:', min(mylist))
+    #finds the lowest value
+    print('highest value is:', max(mylist))
+    #finds the highest value
     
+def p16():
+    list1 = [1, 2, 3, 4]
+    list2 = list1
+    print(list2)
+    list1.append(5)
+    print(list2)
+    
+def p17():
+    list1 = [1, 2, 3, 4]
+    list2 =[]
+    for element in list1:
+        list2.append(element)
+        #this and the line above copy the last list
+    list2.append(5)
+    print(list1)
+    print(list2)
+    
+def p18():
+    names = ['bob', 'tim', 'jeff']
+    newnames = []
+    for name in names:
+        print(name)
+        print('adding')
+        newnames.append(name)
+        print(newnames)
+        
+def p19():
+    employ = input('how many employes do you have')
+    hours = [0] * employ
+    for index in range(employ):
+        print('enter the hours worked by employees', index +1, end='')
+        hours[index] = int(input(': '))
+    rate = float(input("\nEnter the hourly rate for all employees: "))
+    print()
+    for index in range(employ):
+        pay = hours[index] * rate
+        print('gross of employes'+ str(index+1) + ': $',
+              format(pay, ',.2f',), sep='')
+        
+def p20():
+    #Adds the numbers in the list to a total
+    math = 0
+    mylist = [2, 4, 6, 8, 10]
+    for index in mylist:
+        math = math + index
+        index = []
+    print(math)
+    
+def p21():
+    math = 0
+    math2 = 0
+    mylist = [2.5, 7.3, 6.5, 4, 5.2]
+    for index in mylist:
+        math = math + index
+        index = []
+        math2 = math2 + 1
+    math = math / math2
+    print(math)
+    
+def p22_1():
+    mylist = [2, 4, 6, 8, 10]
+    math = p22_2(mylist)
+    print(math)
+def p22_2(mylist):
+    math = 0
+    mylist = [2, 4, 6, 8, 10]
+    for index in mylist:
+        math = math + index
+        index = []
+    return math
