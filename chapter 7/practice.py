@@ -255,3 +255,6 @@ def p25():
         outfile.close()
     except Exception as err:
         print(err)
+        
+def p26():
+    pass
