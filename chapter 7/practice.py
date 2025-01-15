@@ -208,4 +208,50 @@ def p22_2(mylist):
     return math
 
 def p23():
-    pass
+    mylist = []
+    AGION = 'y'
+    while AGION == 'y' or AGION == 'Y':
+        num = input('what do you want to add')
+        mylist.append(num)
+        AGION = input('do you want to add another number')
+    print(mylist)
+    
+def p24():
+    #needs fixing
+    mylist = []
+    AGION = 'y'
+    while AGION == 'y' or AGION == 'Y':
+        num = input('what do you want to add')
+        mylist.append(num)
+        AGION = input('do you want to add another number')
+    small = min(mylist)
+    mylist.remove(small)
+    math = 0
+    math2 = 0
+    for index in mylist:
+        math = math + index
+        index = []
+        math2 = math2 + 1
+    math = math / math2
+    print('the smallest is',small,'the dvrige is',math)
+    
+def p25():
+    city = ['kansas city', 'lawrence', 'wichita', 'manhattan']
+    try:
+        outfile = open('cityy.txt', 'w')
+        outfile.writelines(city)
+        print('all data is writen')
+        outfile.close()
+    except Exception as err:
+        print(err)
+        
+def p25():
+    city = ['kansas city', 'lawrence', 'wichita', 'manhattan']
+    try:
+        outfile = open('cityy.txt', 'w')
+        for city in cityy:
+            outfile.writelines(city + '\n')
+        print('all data is writen')
+        outfile.close()
+    except Exception as err:
+        print(err)
