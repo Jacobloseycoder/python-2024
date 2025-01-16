@@ -257,4 +257,39 @@ def p25():
         print(err)
         
 def p26():
-    pass
+    numbers = [1, 2, 3, 4, 5, 6, 7]
+    outfile = open('numberlist.txt', 'w')
+    for number in numbers:
+        outfile.write(str(number) + '\n')
+    outfile.close()
+    print('All numbers saved to numberlist.txt')
+    
+def p27():
+    numbers = []
+    try:
+        infile = open('numberlist.txt', 'r')
+        for num in infile:
+            numbers.append(int(num.rstrip('\n')))
+        infile.close()
+    except Exception as err:
+        print(err)
+    print('Here is the list created from numberlist.txt:')
+    print(numbers)
+    
+def p28(): #Program 7-18 (import random at the top of your .py file)
+    #random numbers accepts no arguments
+    #it creates a 2D list with a maximum row index of 3
+    #and a maximum column index of 2
+    #it uses nested loops to fill the 2D list with a random number #from 1-100
+    #constants for row/cols loops
+    ROWS = 3
+    COLS = 4
+    values =[[0, 0, 0, 0],
+            [0, 0, 0, 0],
+            [0, 0, 0, 0]]
+    #loop to fill the list with random numbers
+    for row in range (ROWS):
+        for col in range (COLS): #for each row, fill all columns
+            values [row][col] = random.randint(1, 100)
+    #output the list
+    print(values)
