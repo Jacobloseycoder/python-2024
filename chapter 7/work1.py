@@ -49,4 +49,28 @@ def w3():
         print('invalid selection ending program...')
 
 def w4():
-    pass
+    try:
+        #make a .txt file to test
+        charge_accounts = []
+        rong = []
+        myfile = open('driver_test_key.txt', 'r')
+        for index in myfile:
+            charge_accounts.append(index)
+        test = input('enter the tests file:')
+        stest = open(test, 'r')
+        while gg != 19:
+            canswer = charge_accounts[gg]
+            sanswer = stest[gg]
+            if canswer != sanswer:
+                rong.append(gg)
+            else:
+            gg = gg +1
+    except IOError:
+        print('file not found')
+        rere = input('do you want to enter another test y/n')
+        if rere == 'y' or rere == 'Y':
+            w4()
+        elif rere == 'n' or rere =='N':
+            print('ending program...')
+        else:
+            print('not a option ending program...')
