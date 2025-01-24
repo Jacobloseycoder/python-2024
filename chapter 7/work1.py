@@ -30,8 +30,12 @@ def w2():
     print('faverige rain per month is {half}')
 
 def w3():
+    charge_accounts = []
+    charge_account = open('charge_accounts.txt', 'r')
+    for index in charge_account:
+        charge_accounts.append(index)
     requ = input('enter rhe acount number:')
-    for index in charge_accounts.txt:
+    for index in charge_accounts:
         if index == requ:
             print('account is valid')
         else:
