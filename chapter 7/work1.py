@@ -31,4 +31,18 @@ def w2():
 
 def w3():
     requ = input('enter rhe acount number:')
-    
+    for index in charge_accounts.txt:
+        if index == requ:
+            print('account is valid')
+        else:
+            print('account not valid')
+    rere = input('do you want to input anouther acount y/n')
+    if rere == 'y' or rere == 'Y':
+        w3()
+    elif rere == 'n' or rere == 'Y':
+        print('ending...')
+    else:
+        print('invalid selection ending program...')
+
+def w4():
+    pass
