@@ -30,4 +30,5 @@ def w2():
     print('faverige rain per month is {half}')
 
 def w3():
-    pass
+    requ = input('enter rhe acount number:')
+    
