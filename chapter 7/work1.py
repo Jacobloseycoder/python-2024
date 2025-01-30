@@ -9,32 +9,31 @@ def w1():
         index = index + 1
 
 def w2():
+    #need to be fixed
     months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     rain = []
     tt = 0
     for days in months:
-        water = input('fEnter the rainfall for {days}:')
+        water = input(f'Enter the rainfall for {days}: ')
         rain.append(water)
     for pp in rain:
-        tt = tt + pp
+        tt = tt + int(pp)
     half = tt / 12
     small = min(rain)
     big = max(rain)
     truesmall = rain.index(small)
-    truebig = rain.index(small)
+    truebig = rain.index(big)
     smallmonth = months[truesmall]
     bigmonth = months[truebig]
-    print('f{smallmonth} had the least rain with {small} inches of rain')
-    print('f{bigmonth} had the least rain with {big} inches of rain')
-    print('fthe total rain this year is {tt}')
-    print('faverige rain per month is {half}')
+    print(f'{smallmonth} had the least rain with {small} inches of rain')
+    print(f'{bigmonth} had the least rain with {big} inches of rain')
+    print(f'the total rain this year is {tt}')
+    print(f'averige rain per month is {half}')
 
 def w3():
     charge_accounts = []
     charge_account = open('charge_accounts.txt', 'r')
-    for index in charge_account:
-        charge_accounts.append(index)
-    requ = input('enter rhe acount number:')
+    requ = input('enter the acount number:')
     for index in charge_accounts:
         if index == requ:
             print('account is valid')
@@ -64,7 +63,7 @@ def w4():
             if canswer != sanswer:
                 rong.append(gg)
             else:
-            gg = gg +1
+                gg = gg +1
     except IOError:
         print('file not found')
         rere = input('do you want to enter another test y/n')
