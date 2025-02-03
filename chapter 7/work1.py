@@ -77,3 +77,18 @@ def w4():
             print('ending program...')
         else:
             print('not a option ending program...')
+def w7():
+    gg = 0
+    tt = input('what is your question')
+    myfile = open('8_ball_responses', 'r')
+    dice_roll = r.randint(1, 12)
+    while gg != dice_roll:
+        read = myfile.readline
+    print(read)
+    rere = input('do you want to ask another? Y/N')
+    if rere == 'y' or rere == 'Y':
+            w7()
+    elif rere == 'n' or rere =='N':
+        print('ending program...')
+    else:
+        print('not a option ending program...')
