@@ -9,36 +9,40 @@ def w1():
         index = index + 1
 
 def w2():
-    #need to be fixed
-    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-    rain = []
-    tt = 0
-    for days in months:
-        water = input(f'Enter the rainfall for {days}: ')
-        rain.append(water)
-    for pp in rain:
-        tt = tt + int(pp)
-    half = tt / 12
-    small = min(rain)
-    big = max(rain)
-    truesmall = rain.index(small)
-    truebig = rain.index(big)
-    smallmonth = months[truesmall]
-    bigmonth = months[truebig]
-    print(f'{smallmonth} had the least rain with {small} inches of rain')
-    print(f'{bigmonth} had the least rain with {big} inches of rain')
-    print(f'the total rain this year is {tt}')
-    print(f'averige rain per month is {half}')
+    try:
+        months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+        rain = []
+        tt = 0
+        for days in months:
+            water = input(f'Enter the rainfall for {days}: ')
+            rain.append(water)
+        for pp in rain:
+            tt = tt + int(pp)
+        half = tt / 12
+        small = min(rain)
+        big = max(rain)
+        truesmall = rain.index(small)
+        truebig = rain.index(big)
+        smallmonth = months[truesmall]
+        bigmonth = months[truebig]
+        print(f'{smallmonth} had the least rain with {small} inches of rain')
+        print(f'{bigmonth} had the most rain with {big} inches of rain')
+        print(f'the total rain this year is {tt}')
+        print(f'averige rain per month is {half}')
+    except IOError:
+        print('not excepted inputs')
 
 def w3():
     charge_accounts = []
+    tt = 'false'
     charge_account = open('charge_accounts.txt', 'r')
     requ = input('enter the acount number:')
     for index in charge_accounts:
         if index == requ:
             print('account is valid')
-        else:
-            print('account not valid')
+            tt = 'true'
+    if tt == 'false':
+        print('account not valid')
     rere = input('do you want to input anouther acount y/n')
     if rere == 'y' or rere == 'Y':
         w3()
@@ -49,9 +53,9 @@ def w3():
 
 def w4():
     try:
-        #make a .txt file to test
         charge_accounts = []
         rong = []
+        gg = 0
         myfile = open('driver_test_key.txt', 'r')
         for index in myfile:
             charge_accounts.append(index)
