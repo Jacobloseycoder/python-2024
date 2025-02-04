@@ -77,6 +77,55 @@ def w4():
             print('ending program...')
         else:
             print('not a option ending program...')
+
+def w5():
+    
+
+def w6():
+    # Define the departments and their members
+    departments = {
+        "Development": ["Julia", "Oliver", "Abigail"],
+        "HR": ["Camden", "Kayleigh", "Cooper", "Kerrigan"],
+        "Sales": ["Avery", "Charlotte", "Elle"]
+    }
+    
+    # Create a list of all people and store their department
+    all_people = {}
+    for department, people in departments.items():
+        for person in people:
+            all_people[person] = department
+    
+    # Create a list of available recipients
+    available_recipients = list(all_people.keys())
+    assignments = {}
+    
+    # Assign each person a recipient from a different department
+    for giver in all_people:
+        valid_choices = []
+        for person in available_recipients:
+            if all_people[person] != all_people[giver]:
+                valid_choices.append(person)
+        
+        # If there are no valid choices, restart the function
+        if not valid_choices:
+            return white_elephant_exchange()
+        
+        # Choose a recipient randomly
+        recipient = random.choice(valid_choices)
+        assignments[giver] = recipient
+        available_recipients.remove(recipient)
+    
+    return assignments
+
+def main():
+    # Run the gift exchange and print the results
+    result = white_elephant_exchange()
+    for giver in result:
+        print(giver, "is gifting to", result[giver])
+
+if __name__ == "__main__":
+    main()
+    
 def w7():
     gg = 0
     tt = input('what is your question')
