@@ -84,6 +84,7 @@ def w7():
     dice_roll = r.randint(1, 12)
     while gg != dice_roll:
         read = myfile.readline
+        gg = gg + 1
     print(read)
     rere = input('do you want to ask another? Y/N')
     if rere == 'y' or rere == 'Y':
