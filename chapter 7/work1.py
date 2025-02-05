@@ -46,17 +46,21 @@ def w2():
 def w3():
     #needed vareables
     charge_accounts = []
+    gg = 0
     tt = 'false'
     charge_account = open('charge_accounts.txt', 'r')
     #finds the acount number
-    requ = input('enter the acount number:')
+    requ = int(input('enter the acount number:'))
     #checks the alowed accounts
-    for index in charge_accounts:
+    while gg != 18:
+        index = int(charge_account.readline())
         if index == requ:
             print('account is valid')
             tt = 'true'
+        gg = gg + 1
     if tt == 'false':
         print('account not valid')
+    charge_account.close()
     #alows to try agion
     rere = input('do you want to input anouther acount y/n')
     if rere == 'y' or rere == 'Y':
@@ -102,6 +106,8 @@ def w4():
             print('ending program...')
         else:
             print('not a option ending program...')
+
+
 
 def print_board(board):
     for row in board:
@@ -160,7 +166,9 @@ def w5():
             current_player = "O" if current_player == "X" else "X"
         else:
             continue  # If the cell is already taken, choose a new random spot
-  
+
+
+
 def qer():
     # Define the departments and their members
     departments = {
@@ -202,6 +210,8 @@ def main():
 #if __name__ == "__main__":
     #main()
     
+
+
 def w7():
     gg = 0
     #asks for the question
