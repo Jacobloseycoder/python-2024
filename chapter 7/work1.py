@@ -45,7 +45,6 @@ def w2():
 
 def w3():
     #needed vareables
-    charge_accounts = []
     gg = 0
     tt = 'false'
     charge_account = open('charge_accounts.txt', 'r')
@@ -76,6 +75,8 @@ def w4():
         charge_accounts = []
         rong = []
         gg = 0
+        pp = 0
+        tt = 0
         myfile = open('driver_test_key.txt', 'r')
         #finds the test answers
         for index in myfile:
@@ -89,13 +90,25 @@ def w4():
             #finds the right answer
             canswer = charge_accounts[gg]
             #finds the test answer
-            sanswer = stest[gg]
+            sanswer = stest.readline()
             #checks if answer is right
             if canswer != sanswer:
                 rong.append(gg)
+                pp = pp + 1
                 gg = gg + 1
             else:
+                tt = tt + 1
                 gg = gg + 1
+        
+        myfile.close()
+        stest.close()
+        print('you got', tt, 'out of 20')
+        print('you missed', pp, 'the maximum you could miss is 5 to pass')
+        if tt > 14:
+            print('you failed try agion later')
+        else:
+            print('congrats you passed')
+        print('the rong answers are', rong)
     #incase of errors
     except IOError:
         print('file not found')
@@ -112,7 +125,7 @@ def w4():
 def print_board(board):
     for row in board:
         print(" | ".join(row))
-        print("-" * 5)
+        print("--" * 5)
 # Function to check if there's a winner
 def winner(board):
     # Check rows, columns, and diagonals for a winner
@@ -224,6 +237,7 @@ def w7():
         read = myfile.readline()
         gg = gg + 1
     print(read)
+    myfile.close()
     #lets the user to play agion
     rere = input('do you want to ask another? Y/N')
     if rere == 'y' or rere == 'Y':
