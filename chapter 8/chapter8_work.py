@@ -1,7 +1,27 @@
 def w1():
-  let = 0
-  popo = input("enter a string of numbers")
-  if isdigit(popo):
-    for leter in popo:
-      let = let + 1
-    let = let - 1
+    num = 0
+    ad = 0
+    tot = 0
+    popo = input("enter a string of numbers")
+    if popo.isdigit():
+        for leter in popo:
+            ad = int(popo[num])
+            tot = tot + ad 
+            num = num + 1
+        print('the total is',tot)
+    else:
+        print("not a acetible string")
+        w1()
+        
+def w2():
+    string = input("enter a date in mm/dd/yy format")
+    if string[0].isdigit():
+        if string[1].isdigit():
+            if string[2].isdigit():
+                if string[3].isdigit():
+                    if string[4].isdigit():
+                        if string[5].isdigit():
+                            if string[6].isdigit():
+                                if string[7].isdigit():
+                                    if string[-1] == string[0]:
+                                        
