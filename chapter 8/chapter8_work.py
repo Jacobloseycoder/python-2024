@@ -1,3 +1,20 @@
+#goo = menu.main333()
+#if goo == 1:
+    #w1()
+#elif goo == 1:
+#     w2()
+# elif goo == 1:
+#     w3()
+# elif goo == 1:
+#     w4()
+# elif goo == 1:
+#     w5()
+# elif goo == 1:
+#     w6()
+# elif goo == 1:
+#     pb_main()
+# elif goo == 1:
+#     main()
 def w1():
     num = 0
     ad = 0
