@@ -1,20 +1,6 @@
-#goo = menu.main333()
-#if goo == 1:
-    #w1()
-#elif goo == 1:
-#     w2()
-# elif goo == 1:
-#     w3()
-# elif goo == 1:
-#     w4()
-# elif goo == 1:
-#     w5()
-# elif goo == 1:
-#     w6()
-# elif goo == 1:
-#     pb_main()
-# elif goo == 1:
-#     main()
+import menu
+goo = menu.main333()
+
 def w1():
     num = 0
     ad = 0
@@ -156,7 +142,7 @@ def pb_frequency():
     regular_numbers = []  # List for numbers in the range 1-69
     powerball_numbers = []  # List for PowerBall numbers (1-26)
     # Open the file and read it line by line
-    with open(pbnumbers.txt, 'r') as file:
+    with open("pbnumbers.txt", 'r') as file:
         for line in file:
             # Split the line into numbers
             parts = line.strip().split()
@@ -265,6 +251,20 @@ def main():
     for year, data in highest_lowest.items():
         print(f"{year}: Highest on {data['highest'][0]} - ${data['highest'][1]:.2f}, "
               f"Lowest on {data['lowest'][0]} - ${data['lowest'][1]:.2f}")
-    # Generate sorted price files
-    generate_sorted_price_files(gas_prices)
-    print("\nFiles 'prices_low_to_high.txt' and 'prices_high_to_low.txt' have been created.")
+        
+if goo == 1:
+    w1()
+elif goo == 1:
+    w2()
+elif goo == 1:
+    w3()
+elif goo == 1:
+    w4()
+elif goo == 1:
+    w5()
+elif goo == 1:
+    w6()
+elif goo == 1:
+    pb_main()
+elif goo == 1:
+    main()
