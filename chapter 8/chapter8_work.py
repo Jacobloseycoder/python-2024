@@ -3,11 +3,14 @@ def w1():
     ad = 0
     tot = 0
     popo = input("enter a string of numbers")
+    #checks if it is a number
     if popo.isdigit():
+        #math
         for leter in popo:
             ad = int(popo[num])
             tot = tot + ad 
             num = num + 1
+            #prints the total
         print('the total is',tot)
     else:
         print("not a acetible string")
@@ -60,6 +63,9 @@ def w2():
             w2()
     else:
         w2()
+        
+def w3():
+    pass
 
 def w4():
     # Ask user for input
