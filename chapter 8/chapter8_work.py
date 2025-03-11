@@ -74,9 +74,8 @@ morse_code = {
     '0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.',
 }
 
-# Function to convert the message to Morse code
 def w3(message):
-    # Validate that the message contains only alphanumeric characters and spaces
+    # Validate that the message only alphanumeric or spaces
     valid_message = True
     for char in message:
         if not (char.isalnum() or char.isspace()):
@@ -96,10 +95,8 @@ def w3(message):
         return ' '.join(morse_message)
     else:
         return "Invalid input! Please enter only alphanumeric characters and spaces."
-
 # Get the user input
 message = input("Enter a message: ")
-
 # Call the function and print the result
 result = w3(message)
 print("Morse Code:", result)
