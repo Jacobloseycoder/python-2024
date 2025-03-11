@@ -1,5 +1,4 @@
 import menu
-goo = menu.main333()
 
 def w1():
     num = 0
@@ -282,20 +281,28 @@ def main():
     for year, data in highest_lowest.items():
         print(f"{year}: Highest on {data['highest'][0]} - ${data['highest'][1]:.2f}, "
               f"Lowest on {data['lowest'][0]} - ${data['lowest'][1]:.2f}")
-        
+goo = menu.main333()
 if goo == 1:
     w1()
+    goo = menu.main333()
 elif goo == 1:
     w2()
+    goo = menu.main333()
 elif goo == 1:
     w3()
+    goo = menu.main333()
 elif goo == 1:
     w4()
+    goo = menu.main333()
 elif goo == 1:
     w5()
+    goo = menu.main333()
 elif goo == 1:
     w6()
+    goo = menu.main333()
 elif goo == 1:
     pb_main()
+    goo = menu.main333()
 elif goo == 1:
     main()
+    goo = menu.main333()
