@@ -48,3 +48,4 @@ def deal_card(deck, need_cards):
         hand += value
         print(card, deel)
     print('the total is', value2)
+    
