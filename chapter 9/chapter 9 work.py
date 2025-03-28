@@ -1,2 +1,2 @@
 def w1():
-    pass
+    coded = open(read.txt)
