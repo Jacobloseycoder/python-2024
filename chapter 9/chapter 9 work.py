@@ -3,8 +3,8 @@ def w1():
     encode = open('code.txt','r')
     lines = coded.readline()
     enlines = encode.readlines()
-    secrit = {enlines}
-    print(lines)
+    secrit = {lines}
+    print(secrit)
     print(enlines)
     coded.close()
     encode.close()
