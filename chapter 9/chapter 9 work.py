@@ -1,4 +1,5 @@
 def w1():
-    coded = open('read.txt','r')
+    coded = open('bill.txt')
     secrit = {coded}
     print(secrit)
+    coded.close()
