@@ -1,51 +1,42 @@
 import string
 import random
-def working():
+def main():
     tt = 0
-    prunt('1:File Encryption and Decryption')
-    prunt('2:Unique Words')
-    prunt('3:World Series Winners')
-    prunt('4:Blackjack Simulation')
-    tt = input('select:')
+    print('1:File Encryption and Decryption')
+    print('2:Unique Words')
+    print('3:World Series Winners')
+    print('4:Blackjack Simulation')
+    tt = int(input('select:'))
     if tt == 1:
         w1()
     elif tt == 2:
-        get_unique_words_from_file(file_name)
+        w2()
     elif tt == 3:
-        main()
+        w3()
     elif tt == 4:
         play_blackjack()
     else:
         print('not a opption')
 def w1():
     dic = {}
-    go = True
     #the messige to decode
     coded = open('bill.txt', 'r')
     #the .txt file with the way to encript
     encode = open('code.txt', 'r')
     for line in encode:
-        line = line.strip()
-        key, value = line.split(":", 1)
+        # Split by the two dot thing
+        key, value = line.strip().split(':')
         dic[key] = value
     print(dic)
-    while go == True:
-        line = coded.read(1)
-        line = line.lower()
-        if line != '':
-            micc = dic[line]
-        else:
-            micc += ''
     coded.close()
     encode.close()
-    print(micc)
     
-def get_unique_words_from_file():
+def get_unique_words_from_file(file):
     # Initialize an empty set to store unique words
     unique_words = set()
     # Open the file in read mode
     try:
-        with open('text.txt', 'r') as file:
+        with open(file, 'r') as file:
             # Read all the content of the file
             text = file.read()
             # Remove punctuation from the text
@@ -58,20 +49,21 @@ def get_unique_words_from_file():
         print(f"The file {text} was not found.")
         return None
     return unique_words
-# Specify the file name
-file1 = 'BBL.txt'  # Changed to BBL.txt
-file2 = 'text.txt'  # Another file of your creation (make sure it exists)
-# Get unique words from both files
-unique_words_file1 = get_unique_words_from_file(file1)
-unique_words_file2 = get_unique_words_from_file(file2)
-# Display results
-if unique_words_file1 is not None:
-    print(f"Unique words from {file1}:")
-    print(sorted(unique_words_file1))
-    print()
-if unique_words_file2 is not None:
-    print(f"Unique words from {file2}:")
-    print(sorted(unique_words_file2))
+def w2():
+    # Specify the file name
+    file1 = 'BBL.txt'  # Changed to BBL.txt
+    file2 = 'text.txt'  # Another file of your creation (make sure it exists)
+    # Get unique words from both files
+    unique_words_file1 = get_unique_words_from_file(file1)
+    unique_words_file2 = get_unique_words_from_file(file2)
+    # Display results
+    if unique_words_file1 is not None:
+        print(f"Unique words from {file1}:")
+        print(sorted(unique_words_file1))
+        print()
+    if unique_words_file2 is not None:
+        print(f"Unique words from {file2}:")
+        print(sorted(unique_words_file2))
 
 #need to make it read spusific files
 def read_world_series_winners(file_name):
@@ -96,9 +88,9 @@ def read_world_series_winners(file_name):
             year += 1
     return team_wins, year_winners
 
-def main():
+def w3():
     # Read the data from the file and create the dictionaries
-    file_name = 'WorldSeriesWinners.txt'
+    file_name = 'WorldSeries.txt'
     team_wins, year_winners = read_world_series_winners(file_name)
     # Prompt the user for a year
     while True:
