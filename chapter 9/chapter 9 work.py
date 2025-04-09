@@ -1,6 +1,7 @@
 import string
 import random
 def working():
+    tt = 0
     prunt('1:File Encryption and Decryption')
     prunt('2:Unique Words')
     prunt('3:World Series Winners')
@@ -39,13 +40,12 @@ def w1():
     encode.close()
     print(micc)
     
-#need to make it read spusific files
-def get_unique_words_from_file(file_name):
+def get_unique_words_from_file():
     # Initialize an empty set to store unique words
     unique_words = set()
     # Open the file in read mode
     try:
-        with open(file_name, 'r') as file:
+        with open('text.txt', 'r') as file:
             # Read all the content of the file
             text = file.read()
             # Remove punctuation from the text
@@ -55,12 +55,12 @@ def get_unique_words_from_file(file_name):
             # Add each word to the set (automatically handles duplicates)
             unique_words.update(words)  
     except FileNotFoundError:
-        print(f"The file {file_name} was not found.")
+        print(f"The file {text} was not found.")
         return None
     return unique_words
 # Specify the file name
 file1 = 'BBL.txt'  # Changed to BBL.txt
-file2 = 'my_file.txt'  # Another file of your creation (make sure it exists)
+file2 = 'text.txt'  # Another file of your creation (make sure it exists)
 # Get unique words from both files
 unique_words_file1 = get_unique_words_from_file(file1)
 unique_words_file2 = get_unique_words_from_file(file2)
