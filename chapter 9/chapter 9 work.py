@@ -74,20 +74,17 @@ def get_unique_words_from_file(file):
         return None
     return unique_words
 def w2():
-    # Specify the file name
     file1 = 'BBL.txt'  # Changed to BBL.txt
     file2 = 'text.txt'  # Another file of your creation (make sure it exists)
     # Get unique words from both files
     unique_words_file1 = get_unique_words_from_file(file1)
     unique_words_file2 = get_unique_words_from_file(file2)
     # Display results
-    if unique_words_file1 is not None:
-        print(f"Unique words from {file1}:")
-        print(sorted(unique_words_file1))
-        print()
-    if unique_words_file2 is not None:
-        print(f"Unique words from {file2}:")
-        print(sorted(unique_words_file2))
+    print(f"Unique words from {file1}:")
+    print(sorted(unique_words_file1))
+    print()
+    print(f"Unique words from {file2}:")
+    print(sorted(unique_words_file2))
 
 #need to make it read spusific files
 def read_world_series_winners(file_name):
