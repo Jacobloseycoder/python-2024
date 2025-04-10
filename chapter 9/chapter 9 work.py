@@ -17,8 +17,10 @@ def main():
         play_blackjack()
     else:
         print('not a opption')
+
 def w1():
     dic = {}
+    new_message = ''
     #the messige to decode
     coded = open('bill.txt', 'r')
     #the .txt file with the way to encript
@@ -27,7 +29,29 @@ def w1():
         # Split by the two dot thing
         key, value = line.strip().split(':')
         dic[key] = value
-    print(dic)
+    for line in coded:
+        line = line.rstrip('\n')
+        for letter in line:
+            # check if it's a space
+            if letter != " ":
+                # check if it's uppercase
+                if letter.isupper():
+                    capital = True
+                    # convert to lowercase
+                    letter = letter.lower()
+                else:
+                    capital = False
+                # get the encoded letter from the key
+                new_letter = dic[letter]
+                # if the original letter was uppercase, convert the new letter to uppercase
+                if capital == True:
+                    new_letter = new_letter.upper()
+                # append the new letter to the result
+                new_message += new_letter
+            else:
+                # if it's a space, just add a space to the encoded message
+                new_message += " "
+    print(new_message)
     coded.close()
     encode.close()
     
@@ -87,7 +111,6 @@ def read_world_series_winners(file_name):
             # Increment the year for the next entry
             year += 1
     return team_wins, year_winners
-
 def w3():
     # Read the data from the file and create the dictionaries
     file_name = 'WorldSeries.txt'
@@ -127,7 +150,7 @@ deck = {
     'King of Clubs': 10, 'Ace of Diamonds': 1, '2 of Diamonds': 2, '3 of Diamonds': 3, '4 of Diamonds': 4,
     '5 of Diamonds': 5, '6 of Diamonds': 6, '7 of Diamonds': 7, '8 of Diamonds': 8, '9 of Diamonds': 9,
     '10 of Diamonds': 10, 'Jack of Diamonds': 10, 'Queen of Diamonds': 10, 'King of Diamonds': 10
-}
+    }
 # Function to calculate the score of a hand, adjusting Aces as needed
 def calculate_score(hand):
     score = 0
