@@ -86,11 +86,10 @@ def w2():
     print(f"Unique words from {file2}:")
     print(sorted(unique_words_file2))
 
-#need to make it read spusific files
-def read_world_series_winners(file_name):
+def read_world_series_winners():
     team_wins = {}  # Dictionary to store the number of times each team has won
     year_winners = {}  # Dictionary to store the team that won each year
-    with open(file_name, 'r') as file:
+    with open('WorldSeries.txt', 'r') as file:
         year = 1903
         for line in file:
             line = line.strip()
@@ -109,9 +108,6 @@ def read_world_series_winners(file_name):
             year += 1
     return team_wins, year_winners
 def w3():
-    # Read the data from the file and create the dictionaries
-    file_name = 'WorldSeries.txt'
-    team_wins, year_winners = read_world_series_winners(file_name)
     # Prompt the user for a year
     while True:
         year_input = input("Enter a year between 1903 and 2008 (or 'quit' to exit): ").strip()
