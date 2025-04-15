@@ -1,3 +1,4 @@
+import random
 class coin:
     def __init__(self):
         self.__sideup = 'heads'
