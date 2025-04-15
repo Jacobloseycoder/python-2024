@@ -30,3 +30,7 @@ class coin:
             self.__sideup = 'tails'
     def get_sideup(self):
         return self.__sideup
+    
+def p1():
+    coin1 = coin.toss(coinn)
+    coin1.get_sideup()
