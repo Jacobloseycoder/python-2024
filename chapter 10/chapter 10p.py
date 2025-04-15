@@ -17,20 +17,7 @@ class dog:
     def bread(self, breed):
         return f"{self.name} is a {breed}."
     #enter variable.bread('messige')
-    
-import random
 
-class coin:
-    def __init__(self):
-        self.__sideup = 'heads'
-    def toss(self):
-        if random.randent(0,1) == 0:
-            self.__sideup = 'heads'
-        else:
-            self.__sideup = 'tails'
-    def get_sideup(self):
-        return self.__sideup
-    
+import coin
 def p1():
-    coin1 = coin.toss(coinn)
-    coin1.get_sideup()
+    
