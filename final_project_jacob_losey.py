@@ -22,4 +22,4 @@ def rules():
   print('you can pick up items by typing pick up when prompted')
   print('to fight back agenst a monster type sword well fighting to use the sword')
   print('if your hp goes to 0 you lose')
-  print('but the number one rule is to have fun')
+  print('but the most important thing is to have fun')
