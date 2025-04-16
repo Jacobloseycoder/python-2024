@@ -1,5 +1,5 @@
 def main():
-  print('_]WELCOME TO DUNGEN MONSTERS'[_)
+  print('_]WELCOME TO DUNGEN MONSTERS[_')
   print('1.play')
   print('2.rules')
   print('3.quit')
