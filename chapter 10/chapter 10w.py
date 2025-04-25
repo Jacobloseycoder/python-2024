@@ -36,7 +36,16 @@ def add_pet():
     ttt = input('enter the pets age')
     t = pet.(t, tt, ttt)
 def modify_pet():
-    
+    print('1. change name')
+    print('2. change age')
+    print('3. change type')
+    go = input('enter here:')
+    if go == 1:
+        
+    elif go == 2:
+        
+    elif go == 3:
+        
 def display_pet():
     
 def display_all():
