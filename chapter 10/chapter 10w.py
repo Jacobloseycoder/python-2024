@@ -125,3 +125,15 @@ def pet_menu():
             break
         else:
             print("Invalid choice. Try again.")
+            
+class car:
+    def __init__(self, year, make, speed):
+        self.year = year
+        self.make = make
+        self.speed = speed
+        def accerate(self):
+            self.speed = self.speed + 5
+        def brake(self):
+            self.speed = self.speed - 5
+        def get_speed(self):
+            return self.speed
