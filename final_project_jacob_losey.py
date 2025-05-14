@@ -775,6 +775,7 @@ def map_gen(up_down, left_right, hero):
     #boss
     elif up_down == 6 and left_right == 3:
         fighting = True
+        soved = False
         print('Icy wind howls through cracked stone.')
         print('The walls glitter with frost.')
         print('in the center lies a sarcophagus rimed in thick ice.')
@@ -782,7 +783,11 @@ def map_gen(up_down, left_right, hero):
         Frozone = boss('Frozone', 50, 5)
         while fighting == True:
             fighting = battle(hero, Frozone)
-        print('you win')
+        while soved == False:
+            ansore = input('Why did the math book look sad?')
+            if ansore == 'it had too many problems':
+                soved = True
+                print('you win')
 
 def item_bar(hero):
     print(hero.get_health())
