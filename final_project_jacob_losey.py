@@ -26,6 +26,7 @@ def rules():
     print('you have to kill the boss to win')
     print('if your hp goes to 0 you lose')
     print('but the most important thing is to have fun')
+    main()
   
 #classes: player, slime, goblon, item, and boss
 #add random chance to hit or damige amount
@@ -948,3 +949,4 @@ def battle(hero, monster):
 #chat is this rizz
 #can I get 5 big booms:boom,Boom,BOom,BOOm,BOOM
 #https://en.wikipedia.org/wiki/Italian_brainrot#/media/File:Tralalero_Tralala.webp
+main()
