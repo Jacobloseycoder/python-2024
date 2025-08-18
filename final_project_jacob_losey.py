@@ -1,6 +1,8 @@
 import random
+import time
 def main():
     print('_]WELCOME TO DUNGEN MONSTERS[_')
+    time.sleep(2)
     print('1.play')
     print('2.rules')
     print('3.quit')
@@ -17,15 +19,22 @@ def main():
     else:
         #loop till option is selected
         print('not a option')
+        time.sleep(2)
         main()
 
 def rules():
     print('onlv use lower case letters')
+    time.sleep(2)
     print('you will be randomly placed in a maze and you have to escape')
+    time.sleep(2)
     print('you can only go north,south,east, or west wen propted')
+    time.sleep(2)
     print('you have to kill the boss to win')
+    time.sleep(2)
     print('if your hp goes to 0 you lose')
+    time.sleep(2)
     print('but the most important thing is to have fun')
+    time.sleep(3)
     main()
   
 #classes: player, slime, goblon, item, and boss
@@ -33,11 +42,12 @@ def rules():
 #shows the health
 class player:
     #constructor for hero class
-    def __init__(self, name, health, weapion, player_class):
+    def __init__(self, name, health, weapion, player_class, wepion_description):
         self.__name = name
         self.__health = health
         self.__weapion = weapion
         self.__player_class = player_class
+        self.__wepion_description = wepion_description
         
     #####---getter meathods---#####
     #returns name
@@ -51,12 +61,16 @@ class player:
         return self.__player_class
     def get_weapion(self):
         return self.__weapion
+    def return_wepion_description(self):
+        return self.__wepion_description
     ###---setter meathods---###
     def loss_health(self, less_health):
         # this reduses the heros health
         if less_health >= self.__health:
             print('you died')
             self.__health = 0
+            time.sleep(3)
+            main()
         else:
             self.__health = self.__health - less_health
             
@@ -83,17 +97,17 @@ class slime:
     #the monstes type
     def get_rece(self):
         return 'slime'
-
-class item:
-    def __init__(self, description, name):
-        self.__name = name
-        self.__description = description
-    #returns weapioms description
-    def return_description(self):
-        return self.__description
-    #returns weapions name
-    def return_name(self):
-        return self.__name
+#might change this to do something IDK
+# class item:
+#     def __init__(self, description, name):
+#         self.__name = name
+#         self.__description = description
+#     #returns weapioms description
+#     def return_description(self):
+#         return self.__description
+#     #returns weapions name
+#     def return_name(self):
+#         return self.__name
 
 class goblion:
     def __init__(self, name, health, attack,):
@@ -156,12 +170,12 @@ class boss:
 def map_gen(up_down, left_right, hero):
     #(1,1)
     if up_down == 1 and left_right == 1:
-        #room description
-        print('you see moss paches all around the room')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('you see moss paches all around the room')
         #path selection
         print('you find there is only two doors')
         print('north')
@@ -177,14 +191,14 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(1,2)
     elif up_down == 2 and left_right == 1:
-        #room description
-        print('A long, narrow corridor with soot-streaked stone walls.')
-        print('Flickering torches cast moving shadows that stretch like claws')
-        print('every footstep echoes with unsettling volume.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('A long, narrow corridor with soot-streaked stone walls.')
+        print('Flickering torches cast moving shadows that stretch like claws')
+        print('every footstep echoes with unsettling volume.')
         #path selection
         print('you see 3 ways to go')
         print('north')
@@ -204,13 +218,13 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(1,3)
     elif up_down == 3 and left_right == 1:
-        #room description
-        print('A grand dining room with a collapsed table, littered with moldy bones and shattered goblets.')
-        print('The stench of decay hangs thick, and rats skitter across the broken tiles.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('A grand dining room with a collapsed table, littered with moldy bones and shattered goblets.')
+        print('The stench of decay hangs thick, and rats skitter across the broken tiles.')
         #path selection
         print('you see 3 ways to go')
         print('north')
@@ -231,6 +245,10 @@ def map_gen(up_down, left_right, hero):
     #(1,4)
     #monster
     elif up_down == 4 and left_right == 1:
+        #invintory check
+        use = input('do you want to check your inventory y/n')
+        if use == 'y':
+            item_bar(hero)
         fighting = True
         #room description
         print('A stone room knee-deep in dark, stagnant water.')
@@ -259,14 +277,14 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(1,5)
     elif up_down == 5 and left_right == 1:
-        #room description
-        print('Smooth marble tiles etched with glowing runes cover the floor and ceiling.')
-        print('A faint hum fills the air')
-        print('the hair on your arms stands up from the static energy.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('Smooth marble tiles etched with glowing runes cover the floor and ceiling.')
+        print('A faint hum fills the air')
+        print('the hair on your arms stands up from the static energy.')
         #path selection
         print('you see 2 ways to go')
         print('east')
@@ -282,13 +300,13 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(2,1)
     elif up_down == 1 and left_right == 2:
-        #room description
-        print('A vast cavern with a narrow, crumbling stone bridge stretching over a bottomless pit.')
-        print('The wind howls from below, and glowing mushrooms cling to the walls.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('A vast cavern with a narrow, crumbling stone bridge stretching over a bottomless pit.')
+        print('The wind howls from below, and glowing mushrooms cling to the walls.')
         #path selection
         print('you see 3 ways to go')
         print('east')
@@ -308,13 +326,13 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(2,2)
     elif up_down == 2 and left_right == 2:
-        #room description
-        print('Iron bars line the room, with cells barely big enough for a person to sit. ')
-        print('Manacles dangle from the ceiling, and muffled weeping seems to come from nowhere.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('Iron bars line the room, with cells barely big enough for a person to sit. ')
+        print('Manacles dangle from the ceiling, and muffled weeping seems to come from nowhere.')
         #path selection
         print('you see 4 doors to enter')
         print('west')
@@ -339,6 +357,10 @@ def map_gen(up_down, left_right, hero):
     #(2,3)
     #monster
     elif up_down == 3 and left_right == 2:
+        #invintory check
+        use = input('do you want to check your inventory y/n')
+        if use == 'y':
+            item_bar(hero)
         fighting = True
         #room description
         print('Webs blanket every surface, thick as curtains.')
@@ -371,13 +393,13 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(2,4)
     elif up_down == 4 and left_right == 2:
-        #room description
-        print('Polished obsidian floors reflect a hoard of glittering gold and jeweled artifacts.')
-        print('Magical light orbs float in the air, undisturbed by time.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('Polished obsidian floors reflect a hoard of glittering gold and jeweled artifacts.')
+        print('Magical light orbs float in the air, undisturbed by time.')
         #path selection
         print('you see 4 doors to enter')
         print('west')
@@ -401,13 +423,13 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(2,5)
     elif up_down == 5 and left_right == 2:
-        #room description
-        print('A circular room where the floor is entirely covered with cracked and splintered bones.')
-        print('Some still bear armor, some gnawed by unseen teeth.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('A circular room where the floor is entirely covered with cracked and splintered bones.')
+        print('Some still bear armor, some gnawed by unseen teeth.')
         #path selection
         print('you see 3 ways to go')
         print('east')
@@ -427,13 +449,13 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(3,1)
     elif up_down == 1 and left_right == 3:
-        #room description
-        print('Walls of spotless glass create a dizzying maze of reflections.')
-        print('Every movement seems doubled it’s hard to tell which way is real.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('Walls of spotless glass create a dizzying maze of reflections.')
+        print('Every movement seems doubled it’s hard to tell which way is real.')
         #path selection
         print('you see 3 ways to go')
         print('east')
@@ -454,6 +476,10 @@ def map_gen(up_down, left_right, hero):
     #(3,2)
     #monster
     elif up_down == 2 and left_right == 3:
+        #invintory check
+        use = input('do you want to check your inventory y/n')
+        if use == 'y':
+            item_bar(hero)
         fighting = True
         #room description
         print('A massive, domed chamber with a slumbering creature at its center.')
@@ -486,14 +512,14 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(3,3)
     elif up_down == 3 and left_right == 3:
-        #room description
-        print('Fungal growths the size of trees glow with bioluminescent light.')
-        print('Spores drift through the air like snow, and the air smells sickly sweet.')
-        print('The ground is scorched and clawed.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('Fungal growths the size of trees glow with bioluminescent light.')
+        print('Spores drift through the air like snow, and the air smells sickly sweet.')
+        print('The ground is scorched and clawed.')
         #path selection
         print('you see 4 ways to go')
         print('west')
@@ -517,13 +543,13 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(3,4)
     elif up_down == 4 and left_right == 3:
-        #room description
-        print('Bookshelves lie splintered and buried under rubble.')
-        print('Tomes are scattered, pages torn, but faint whispers can be heard if you lean close to the ink.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('Bookshelves lie splintered and buried under rubble.')
+        print('Tomes are scattered, pages torn, but faint whispers can be heard if you lean close to the ink.')
         #path selection
         print('you see 4 ways to go')
         print('west')
@@ -547,14 +573,14 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(3,5)
     elif up_down == 5 and left_right == 3:
-        #room description
-        print('A circular pit ringed with iron gates.')
-        print('The stone floor is dark with dried blood.')
-        print('Weapons lie discarded the crowd’s phantom cheers linger faintly.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('A circular pit ringed with iron gates.')
+        print('The stone floor is dark with dried blood.')
+        print('Weapons lie discarded the crowd’s phantom cheers linger faintly.')
         #path selection
         print('you see 4 ways to go')
         print('west')
@@ -577,14 +603,14 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(4,1)
     elif up_down == 1 and left_right == 4:
-        #room description
-        print('Gears grind behind walls of brass and iron.')
-        print('A massive pendulum swings from the ceiling.')
-        print('The ticking is deafening, mechanical and constant.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('Gears grind behind walls of brass and iron.')
+        print('A massive pendulum swings from the ceiling.')
+        print('The ticking is deafening, mechanical and constant.')
         #path selection
         print('you see 3 ways to go')
         print('west')
@@ -605,6 +631,10 @@ def map_gen(up_down, left_right, hero):
     #(4,2)
     #monster
     elif up_down == 2 and left_right == 4:
+        #invintory check
+        use = input('do you want to check your inventory y/n')
+        if use == 'y':
+            item_bar(hero)
         fighting = True
         #room description
         print('A raised dais holds a black crystal orb atop a clawed pedestal.')
@@ -636,14 +666,14 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(4,3)
     elif up_down == 3 and left_right == 4:
-        #room description
-        print('Tiny beds with rotten sheets line the walls.')
-        print('A rocking horse sways slowly, though theres no wind.')
-        print('Laughter echoes faintly, then stops abruptly.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('Tiny beds with rotten sheets line the walls.')
+        print('A rocking horse sways slowly, though theres no wind.')
+        print('Laughter echoes faintly, then stops abruptly.')
         #path selection
         print('you see 4 ways to go')
         print('west')
@@ -668,6 +698,10 @@ def map_gen(up_down, left_right, hero):
     #(4,4)
     #mini-boss
     elif up_down == 4 and left_right == 4:
+        #invintory check
+        use = input('do you want to check your inventory y/n')
+        if use == 'y':
+            item_bar(hero)
         fighting = True
         #room description
         print('Jagged black stone forms a small altar.')
@@ -700,14 +734,14 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(4,5)
     elif up_down == 5 and left_right == 4:
-        #room description
-        print('Glass tubes bubble with neon liquids.')
-        print('Strange half-finished constructs lie on tables some twitching.')
-        print('A chalkboard is filled with frenzied scribbles.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('Glass tubes bubble with neon liquids.')
+        print('Strange half-finished constructs lie on tables some twitching.')
+        print('A chalkboard is filled with frenzied scribbles.')
         #path selection
         print('you see 3 ways to go')
         print('west')
@@ -728,6 +762,10 @@ def map_gen(up_down, left_right, hero):
     #(5,1)
     #monster
     elif up_down == 1 and left_right == 5:
+        #invintory check
+        use = input('do you want to check your inventory y/n')
+        if use == 'y':
+            item_bar(hero)
         fighting = True
         #room description
         print('Dozens of ice figures frozen mid-run, mid-scream, mid-plea.')
@@ -750,13 +788,13 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(5,2)
     elif up_down == 2 and left_right == 5:
-        #room description
-        print('A crumbling circular room with a deep dry well in the center.')
-        print('The stones around it are etched with warding glyphs.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('A crumbling circular room with a deep dry well in the center.')
+        print('The stones around it are etched with warding glyphs.')
         #path selection
         print('you see 3 ways to go')
         print('west')
@@ -777,6 +815,10 @@ def map_gen(up_down, left_right, hero):
     #(5,3)
     #monster
     elif up_down == 3 and left_right == 5:
+        #invintory check
+        use = input('do you want to check your inventory y/n')
+        if use == 'y':
+            item_bar(hero)
         fighting = True
         #room description
         print('Dozens of painted eyes cover the walls and ceiling.')
@@ -805,14 +847,14 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(5,4)
     elif up_down == 4 and left_right == 5:
-        #room description
-        print('The walls slowly contract and expand as though the room itself breathes.')
-        print('A warm, wet smell fills the air.')
-        print('the stowns have a familiar feel to them')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('The walls slowly contract and expand as though the room itself breathes.')
+        print('A warm, wet smell fills the air.')
+        print('the stowns have a familiar feel to them')
         #path selection
         print('you see 3 ways to go')
         print('west')
@@ -832,13 +874,13 @@ def map_gen(up_down, left_right, hero):
             map_gen(up_down, left_right, hero)
     #(5,5)
     elif up_down == 5 and left_right == 5:
-        #room description
-        print('A low mist clings to the floor darker than shadow.')
-        print('It seems to resist movement, curling around your feet, hiding whatever lies beneath.')
         #invintory check
         use = input('do you want to check your inventory y/n')
         if use == 'y':
             item_bar(hero)
+        #room description
+        print('A low mist clings to the floor darker than shadow.')
+        print('It seems to resist movement, curling around your feet, hiding whatever lies beneath.')
         #path selection
         print('you see 2 ways to go')
         print('west')
@@ -875,10 +917,10 @@ def map_gen(up_down, left_right, hero):
 
 #lets someone check there states
 def item_bar(hero):
-    print(hero.get_health())
-    print(hero.get_weapion())
-    wep = hero.get_weapion()
-    print(wep.return_description())
+    print('HP:',hero.get_health())
+    print('wepion:',hero.get_weapion())
+    print('wepion description:',hero.return_wepion_description())
+    time.sleep(3)
 
 def play():
     name = input('enter the players name:')
@@ -898,7 +940,7 @@ def play():
         print('not a option')
         play()
     #sets up the player and starts the game
-    hero = player(name, hp, weapion, classs)
+    hero = player(name, hp, weapion, classs, wep_descrip)
     weapion = item(weapion, wep_descrip)
     up_down = random.randint(1,5)
     left_right = random.randint(1,5)
@@ -908,6 +950,7 @@ def battle(hero, monster):
     print("A wild", monster.get_rece(), "named", monster.get_name(), "appears!")
     while True:
         print("Your HP:", hero.get_health())
+        time.sleep(1)
         print(monster.get_name(),"'s HP:", monster.health_check())
         action = input("Attack or Run? ").lower()
         #running action line
