@@ -120,6 +120,10 @@ def battle(hero, monster):
             print("You hit the" ,monster.get_name() ,"for", damage, "damage!")
             if monster.health_check() <= 0:
                 print("You defeated", monster.get_name(),"!")
+                if monster.get_rece() != 'abamanation':
+                    coin_add(5)
+                else:
+                    coin_add(25)
                 return False
             # Monster attack
             monster_damage = random.randint(1, monster.return_attack())
@@ -196,7 +200,7 @@ class coin:
     def coin_subtraction(self, sub):
         self.__amount = self.__amount - sub
     #add coins
-    def coin_subtraction(self, add):
+    def coin_add(self, add):
         self.__amount = self.__amount + add
 
 class goblion:
