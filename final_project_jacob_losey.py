@@ -1,8 +1,24 @@
 import random
 import time
+#things to add
+#-------------
+#1.reformat code to look beter(maybe use ai)
+#2.add cash
+#3.add more spaces
+#4.add shop
+#5.add casino
+#6.rebalance classes
+#7.add new classes
+#8.add NPCs
+#9.change flavor text to make sence
+#10.add suiside option mid game\quit mid game
+#11.add saveing progres
+#maybe turtle fight animations
+#maybe make fights one time only
+#---------------
 def main():
     print('_]WELCOME TO DUNGEN MONSTERS[_')
-    time.sleep(2)
+    time.sleep(1)
     print('1.play')
     print('2.rules')
     print('3.quit')
@@ -36,10 +52,7 @@ def rules():
     print('but the most important thing is to have fun')
     time.sleep(3)
     main()
-  
-#classes: player, slime, goblon, item, and boss
-#add random chance to hit or damige amount
-#shows the health
+
 class player:
     #constructor for hero class
     def __init__(self, name, health, weapion, player_class, wepion_description):
@@ -97,17 +110,16 @@ class slime:
     #the monstes type
     def get_rece(self):
         return 'slime'
-#might change this to do something IDK
-# class item:
-#     def __init__(self, description, name):
-#         self.__name = name
-#         self.__description = description
-#     #returns weapioms description
-#     def return_description(self):
-#         return self.__description
-#     #returns weapions name
-#     def return_name(self):
-#         return self.__name
+
+class coin:
+    def __init__(self, amount):
+        self.__amount = amount
+     #returns coin amount
+    def return_amount(self):
+        return self.__amount
+    #subtract coin
+    def coin_subtraction(self, sub):
+        self.__amount = self.__amount - sub
 
 class goblion:
     def __init__(self, name, health, attack,):
