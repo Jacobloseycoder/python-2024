@@ -1,1 +1,95 @@
+import random
+import time
+import string
 
+# Word banks
+buzzwords = [
+    "skibidi", "gyatt", "rizz", "sigma", "ohio", "fanum tax",
+    "grimace", "kai cenat", "goofy ahh", "NPC", "sus", "based",
+    "delulu", "bussin", "mid", "glitchcore", "vibe check"
+]
+
+emojis = ["💀", "🔥", "😭", "👀", "🗿", "✨", "🤡", "🚨", "⚡"]
+
+actions = [
+    "detected", "activated", "engaged", "malfunctioning",
+    "overclocked", "collapsing", "ascending", "vibing",
+    "glitching", "spawning"
+]
+
+phrases = [
+    "what did bro just say",
+    "this ain't real",
+    "ain't no way",
+    "caught in 4k",
+    "this is illegal",
+    "who let bro cook",
+    "this changes everything",
+    "we are doomed",
+    "reality.exe stopped working"
+]
+
+def random_string(length=8):
+    return ''.join(random.choices(string.ascii_lowercase, k=length))
+
+def brainrot_line():
+    line = []
+
+    # Random structure
+    for _ in range(random.randint(3, 10)):
+        choice = random.choice(["buzz", "emoji", "action", "phrase", "noise"])
+
+        if choice == "buzz":
+            line.append(random.choice(buzzwords))
+        elif choice == "emoji":
+            line.append(random.choice(emojis))
+        elif choice == "action":
+            line.append(random.choice(actions))
+        elif choice == "phrase":
+            line.append(random.choice(phrases))
+        elif choice == "noise":
+            line.append(random_string(random.randint(4, 10)))
+
+    return " ".join(line)
+
+def brainrot_block(lines=20):
+    return "\n".join(brainrot_line() for _ in range(lines))
+
+def chaos_mode():
+    while True:
+        print(brainrot_block(random.randint(5, 25)))
+        print("\n" + "=" * 50 + "\n")
+        time.sleep(random.uniform(0.2, 1.2))
+
+def glitch_text(text):
+    glitched = ""
+    for char in text:
+        if random.random() < 0.2:
+            glitched += char + random.choice(["̷", "̸", "̴"])
+        else:
+            glitched += char
+    return glitched
+
+def dramatic_mode():
+    while True:
+        line = brainrot_line()
+        print(glitch_text(line))
+        time.sleep(0.1)
+
+def main():
+    print("BRAINROT GENERATOR INITIALIZED 💀\n")
+
+    mode = input("Choose mode (chaos/dramatic/burst): ").strip().lower()
+
+    if mode == "chaos":
+        chaos_mode()
+    elif mode == "dramatic":
+        dramatic_mode()
+    elif mode == "burst":
+        print(brainrot_block(100))
+    else:
+        print("Unknown mode. Defaulting to chaos.")
+        chaos_mode()
+
+if __name__ == "__main__":
+  main()
